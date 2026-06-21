@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baking Bliss | Hobby Site</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Verdana, Geneva, sans-serif;
+      background-color: #fff1e6;
+      color: #3d1f12;
+    }
+
+    header, footer {
+      background-color: #7b2d26;
+      color: #fff8f0;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      font-family: Georgia, serif;
+    }
+
+    nav a, footer a {
+      color: #ffe8c2;
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: bold;
+    }
+
+    nav a:hover, footer a:hover {
+      color: #ffffff;
+      border-bottom: 2px solid #ffffff;
+    }
+
+    main {
+      max-width: 950px;
+      margin: 25px auto;
+      padding: 20px;
+    }
+
+    section {
+      display: none;
+      background-color: #ffd8be;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(61, 31, 18, 0.2);
+    }
+
+    section.active {
+      display: block;
+    }
+
+    figure {
+      background-color: #fff8f0;
+      padding: 15px;
+      border-radius: 12px;
+      margin: 20px auto;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    figcaption {
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    .prompt-note {
+      font-style: italic;
+      font-size: 0.95em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff8f0;
+      margin-top: 15px;
+    }
+
+    th, td {
+      border: 1px solid #7b2d26;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #b85c38;
+      color: white;
+    }
+
+    ul, ol {
+      line-height: 1.7;
+    }
+
+    .divider {
+      color: #b85c38;
+      font-size: 1.2em;
+      margin: 0 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Baking Bliss</h1>
+
+    <nav>
+      <a href="#" onclick="showSection('what')">What</a>
+      <span class="divider">✦</span>
+      <a href="#" onclick="showSection('who')">Who</a>
+      <span class="divider">✦</span>
+      <a href="#" onclick="showSection('when')">When</a>
+      <span class="divider">✦</span>
+      <a href="#" onclick="showSection('where')">Where</a>
+      <span class="divider">✦</span>
+      <a href="#" onclick="showSection('how')">How</a>
+      <span class="divider">✦</span>
+      <a href="#" onclick="showSection('why')">Why</a>
+      <span class="divider">✦</span>
+      <a href="#" onclick="showSection('ai')">AI Prompts</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="what" class="active">
+      <h2>What: Welcome to Baking</h2>
+      <p>Baking is the hobby of creating sweet and savory foods using ingredients like flour, sugar, eggs, butter, and spices.</p>
+      <p>I enjoy baking because it combines creativity, patience, and comfort food all in one activity.</p>
+      <ul>
+        <li>Cupcakes</li>
+        <li>Cookies</li>
+        <li>Cakes</li>
+      </ul>
+
+      <figure>
+        <img src="images/baking-home.jpg" alt="Fresh baked cupcakes on a kitchen counter">
+        <figcaption>Fresh Cupcakes</figcaption>
+        <p class="prompt-note">AI prompt used: “Create a warm photorealistic image of fresh cupcakes on a cozy kitchen counter.”</p>
+      </figure>
+    </section>
+
+    <section id="who">
+      <h2>Who: About Me</h2>
+      <p>I am someone who enjoys relaxing hobbies that still feel productive and creative.</p>
+      <p>Baking gives me a way to make something beautiful while also sharing it with others.</p>
+      <ul>
+        <li>Favorite thing to bake: cupcakes</li>
+        <li>Favorite flavor: vanilla with strawberry</li>
+        <li>Favorite part: decorating</li>
+      </ul>
+
+      <figure>
+        <img src="images/baking-about.jpg" alt="A person decorating cupcakes with frosting">
+        <figcaption>Decorating Desserts</figcaption>
+        <p class="prompt-note">AI prompt used: “Create a photorealistic image of someone decorating cupcakes with pastel frosting.”</p>
+      </figure>
+    </section>
+
+    <section id="when">
+      <h2>When: Best Times to Bake</h2>
+      <p>Baking is perfect for weekends, holidays, birthdays, or any time I want to make something comforting.</p>
+      <p>I usually prefer baking in the evening because it feels calm and peaceful.</p>
+
+      <table>
+        <tr>
+          <th>Time</th>
+          <th>Best Bake</th>
+        </tr>
+        <tr>
+          <td>Morning</td>
+          <td>Muffins or banana bread</td>
+        </tr>
+        <tr>
+          <td>Afternoon</td>
+          <td>Cookies or brownies</td>
+        </tr>
+        <tr>
+          <td>Evening</td>
+          <td>Cupcakes or cake</td>
+        </tr>
+      </table>
+
+      <figure>
+        <img src="images/baking-when.jpg" alt="Cookies baking in an oven">
+        <figcaption>Evening Baking</figcaption>
+        <p class="prompt-note">AI prompt used: “Create a photorealistic image of cookies baking in a warm glowing oven.”</p>
+      </figure>
+    </section>
+
+    <section id="where">
+      <h2>Where: Best Places to Bake</h2>
+      <p>The best place to bake is a clean kitchen with enough counter space.</p>
+      <p>Baking can also happen in a dorm kitchen, family kitchen, or small apartment kitchen.</p>
+      <ol>
+        <li>Home kitchen</li>
+        <li>Community kitchen</li>
+        <li>Friend’s kitchen</li>
+      </ol>
+
+      <figure>
+        <img src="images/baking-where.jpg" alt="A cozy kitchen prepared for baking">
+        <figcaption>Cozy Baking Space</figcaption>
+        <p class="prompt-note">AI prompt used: “Create a photorealistic image of a cozy kitchen with baking tools and ingredients.”</p>
+      </figure>
+    </section>
+
+    <section id="how">
+      <h2>How: How Baking Works</h2>
+      <p>Baking starts with choosing a recipe and gathering ingredients.</p>
+      <p>Then, the ingredients are measured, mixed, baked, cooled, and decorated.</p>
+      <ul>
+        <li>Read the full recipe first.</li>
+        <li>Measure ingredients carefully.</li>
+        <li>Let baked goods cool before decorating.</li>
+      </ul>
+
+      <figure>
+        <img src="images/baking-how.jpg" alt="Baking ingredients measured in bowls">
+        <figcaption>Preparing Ingredients</figcaption>
+        <p class="prompt-note">AI prompt used: “Create a photorealistic image of baking ingredients measured in bowls on a counter.”</p>
+      </figure>
+    </section>
+
+    <section id="why">
+      <h2>Why: Why I Like Baking</h2>
+      <p>Baking is fun because it turns simple ingredients into something special.</p>
+      <p>It also helps me relax and focus on one step at a time.</p>
+      <p>The best part is sharing the final result with friends or family.</p>
+
+      <figure>
+        <img src="images/baking-why.jpg" alt="A plate of decorated cupcakes ready to share">
+        <figcaption>Sharing Sweet Treats</figcaption>
+        <p class="prompt-note">AI prompt used: “Create a photorealistic image of decorated cupcakes on a plate ready to share.”</p>
+      </figure>
+    </section>
+
+    <section id="ai">
+      <h2>AI Prompts</h2>
+      <p>I used AI to help create the structure, wording, and image prompt ideas for this hobby website.</p>
+      <p>Prompts used:</p>
+      <ul>
+        <li>“Create a one-page hobby website using HTML, CSS, and JavaScript.”</li>
+        <li>“Write short section content for a baking hobby website.”</li>
+        <li>“Give me photorealistic image prompts for a baking website.”</li>
+      </ul>
+
+      <figure>
+        <img src="images/baking-ai.jpg" alt="Laptop beside baking ingredients">
+        <figcaption>AI and Baking Planning</figcaption>
+        <p class="prompt-note">AI prompt used: “Create a photorealistic image of a laptop next to baking ingredients on a kitchen counter.”</p>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      <a href="https://validator.w3.org/">HTML Validation</a>
+      <span class="divider">✦</span>
+      <a href="https://jigsaw.w3.org/css-validator/">CSS Validation</a>
+      <span class="divider">✦</span>
+      <a href="https://wave.webaim.org/">Accessibility Validation</a>
+    </p>
+
+    <p>
+      Designed by
+      <a href="../nehanexussolutions.co/index.html">Neha Nexus Solutions</a>
+      ©2026
+    </p>
+  </footer>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll("main section");
+
+      sections.forEach(function(section) {
+        section.classList.remove("active");
+      });
+
+      document.getElementById(sectionId).classList.add("active");
+    }
+  </script>
+</body>
+</html>
