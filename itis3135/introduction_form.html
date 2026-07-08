@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon.ico">
+
+    <title>ITIS 3135 | Neha Kamichetty | Nice Kangaroo | Introduction Form</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/default.css">
+
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+    <style>
+        .introduction-page main {
+            max-width: 720px;
+            padding: 2rem 1.75rem;
+        }
+
+        .introduction-page main p,
+        .introduction-page main li,
+        .introduction-page main figcaption,
+        .introduction-page main blockquote,
+        .introduction-page .privacy-notice,
+        .introduction-page label,
+        .introduction-page input,
+        .introduction-page textarea,
+        .introduction-page select,
+        .introduction-page button {
+            font-family: "Comfortaa", Arial, sans-serif;
+            line-height: 1.8;
+        }
+
+        .introduction-page .page-title {
+            font-family: Georgia, serif;
+            color: #883128;
+            font-size: 2.25rem;
+            text-align: center;
+            margin: 0 0 1.75rem;
+            border-bottom: none;
+            display: block;
+            padding-bottom: 0;
+        }
+
+        .introduction-page .intro-photo {
+            margin: 0 auto 1.5rem;
+            text-align: center;
+            max-width: 280px;
+        }
+
+        .introduction-page .intro-photo img {
+            width: 280px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(58, 31, 27, 0.22);
+            display: block;
+            margin: 0 auto;
+        }
+
+        .introduction-page .intro-photo figcaption {
+            margin-top: 0.75rem;
+            font-style: italic;
+            color: #6d4a44;
+            font-size: 0.95rem;
+        }
+
+        .introduction-page .privacy-notice {
+            background-color: #fff8f9;
+            border-left: 4px solid #883128;
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            margin: 0 0 1.75rem;
+            box-shadow: 0 2px 8px rgba(136, 49, 40, 0.08);
+        }
+
+        .introduction-page .privacy-notice p {
+            margin: 0;
+        }
+
+        .introduction-page .privacy-notice .signature {
+            display: block;
+            margin-top: 0.5rem;
+            font-weight: 600;
+            color: #883128;
+        }
+
+        .introduction-page .intro-lead {
+            margin: 0 0 2rem;
+            font-size: 1rem;
+        }
+
+        .introduction-page .intro-details {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .introduction-page .intro-details li {
+            margin-bottom: 1.35rem;
+            padding-bottom: 1.35rem;
+            border-bottom: 1px solid #e8c4c8;
+        }
+
+        .introduction-page .intro-details li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .introduction-page .intro-details strong {
+            display: block;
+            color: #883128;
+            margin-bottom: 0.35rem;
+            font-family: Georgia, serif;
+        }
+
+        .introduction-page .intro-quote {
+            margin: 2.5rem 0 0;
+            padding: 1.75rem 1.25rem 0;
+            border-top: 2px solid #cc8b84;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .introduction-page .intro-quote p {
+            margin: 0 0 0.5rem;
+            font-size: 1.15rem;
+            color: #883128;
+        }
+
+        .introduction-page .intro-quote footer {
+            font-style: normal;
+            font-weight: 600;
+            color: #6d4a44;
+        }
+
+        .introduction-page .form-section {
+            margin-bottom: 1.75rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid #e8c4c8;
+        }
+
+        .introduction-page .form-section-title {
+            color: #883128;
+            font-family: Georgia, serif;
+            margin: 0 0 1rem;
+        }
+
+        .introduction-page .form-field {
+            margin-bottom: 1rem;
+        }
+
+        .introduction-page .form-field label {
+            display: block;
+            font-weight: 600;
+            color: #883128;
+            margin-bottom: 0.35rem;
+        }
+
+        .introduction-page .form-field input[type="text"],
+        .introduction-page .form-field input[type="url"],
+        .introduction-page .form-field input[type="date"],
+        .introduction-page .form-field input[type="file"],
+        .introduction-page .form-field textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0.65rem 0.75rem;
+            border: 1px solid #cc8b84;
+            border-radius: 8px;
+            background-color: #fff8f9;
+            color: #3a1f1b;
+        }
+
+        .introduction-page .form-field textarea {
+            min-height: 90px;
+            resize: vertical;
+        }
+
+        .introduction-page .optional-label::after {
+            content: " (optional)";
+            font-weight: normal;
+            color: #6d4a44;
+        }
+
+        .introduction-page .course-entry {
+            border: 1px solid #e8c4c8;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: #fff8f9;
+        }
+
+        .introduction-page .course-entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .introduction-page .course-entry-title {
+            margin: 0;
+            color: #883128;
+            font-family: Georgia, serif;
+        }
+
+        .introduction-page .form-actions,
+        .introduction-page .result-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .introduction-page .button,
+        .introduction-page button {
+            background-color: #883128;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.1rem;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .introduction-page .button:hover,
+        .introduction-page button:hover {
+            background-color: #6d251e;
+        }
+
+        .introduction-page .button-secondary {
+            background-color: #cc8b84;
+        }
+
+        .introduction-page .button-secondary:hover {
+            background-color: #883128;
+        }
+
+        .introduction-page .button-danger {
+            background-color: #6d251e;
+        }
+
+        .introduction-page .delete-course {
+            padding: 0.4rem 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .introduction-page .form-error {
+            color: #6d251e;
+            font-weight: 600;
+            margin: 0 0 1rem;
+        }
+
+        .introduction-page .picture-preview {
+            margin-top: 0.75rem;
+            text-align: center;
+        }
+
+        .introduction-page .picture-preview img {
+            width: 180px;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(58, 31, 27, 0.15);
+        }
+
+        .introduction-page .reset-form-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: #883128;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .introduction-page .reset-form-link:hover {
+            text-decoration: underline;
+        }
+
+        .introduction-page .generated-output {
+            margin-top: 1.75rem;
+            padding-top: 1.25rem;
+            border-top: 2px solid #cc8b84;
+        }
+
+        .introduction-page .output-title {
+            color: #883128;
+            font-family: Georgia, serif;
+            margin: 0 0 0.75rem;
+        }
+
+        .introduction-page .generated-output-textarea {
+            width: 100%;
+            min-height: 280px;
+            box-sizing: border-box;
+            padding: 1rem;
+            border: 1px solid #cc8b84;
+            border-radius: 8px;
+            background-color: #fff8f9;
+            color: #3a1f1b;
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            resize: vertical;
+        }
+
+        @media (max-width: 600px) {
+            .introduction-page main {
+                padding: 1.5rem 1.15rem;
+            }
+
+            .introduction-page .page-title {
+                font-size: 1.85rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="introduction-page">
+
+    <div data-include="components/header.html"></div>
+
+    <main id="introduction-main">
+        <h2 class="page-title">Introduction Form</h2>
+
+        <form id="introduction-form" novalidate>
+            <section class="form-section" aria-labelledby="name-section-title">
+                <h3 class="form-section-title" id="name-section-title">Name and Mascot</h3>
+
+                <div class="form-field">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="middleName" class="optional-label">Middle Name or Initial</label>
+                    <input type="text" id="middleName" name="middleName">
+                </div>
+
+                <div class="form-field">
+                    <label for="nickname" class="optional-label">Nickname/Preferred Name</label>
+                    <input type="text" id="nickname" name="nickname">
+                </div>
+
+                <div class="form-field">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="mascotAdjective">Mascot Adjective</label>
+                    <input type="text" id="mascotAdjective" name="mascotAdjective" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="mascotAnimal">Mascot Animal</label>
+                    <input type="text" id="mascotAnimal" name="mascotAnimal" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="divider">Divider Symbol</label>
+                    <input type="text" id="divider" name="divider" required>
+                </div>
+            </section>
+
+            <section class="form-section" aria-labelledby="ack-section-title">
+                <h3 class="form-section-title" id="ack-section-title">Acknowledgment</h3>
+
+                <div class="form-field">
+                    <label for="acknowledgment">Acknowledgment Statement</label>
+                    <textarea id="acknowledgment" name="acknowledgment" required></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="acknowledgmentDate">Acknowledgment Date</label>
+                    <input type="text" id="acknowledgmentDate" name="acknowledgmentDate" required placeholder="MM/DD/YYYY">
+                </div>
+            </section>
+
+            <section class="form-section" aria-labelledby="picture-section-title">
+                <h3 class="form-section-title" id="picture-section-title">Picture</h3>
+
+                <div class="form-field">
+                    <label for="pictureAlt">Picture Alt Text</label>
+                    <input type="text" id="pictureAlt" name="pictureAlt" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="pictureCaption">Picture Caption</label>
+                    <input type="text" id="pictureCaption" name="pictureCaption" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="pictureUpload">Picture Upload</label>
+                    <input type="file" id="pictureUpload" name="pictureUpload" accept="image/*">
+                    <div class="picture-preview">
+                        <img id="picturePreview" src="images/neha-introduction.jpg" alt="Current introduction photo preview">
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section" aria-labelledby="statement-section-title">
+                <h3 class="form-section-title" id="statement-section-title">Personal Statement</h3>
+
+                <div class="form-field">
+                    <label for="personalStatement">Personal Statement</label>
+                    <textarea id="personalStatement" name="personalStatement" required></textarea>
+                </div>
+            </section>
+
+            <section class="form-section" aria-labelledby="background-section-title">
+                <h3 class="form-section-title" id="background-section-title">Background Information</h3>
+
+                <div class="form-field">
+                    <label for="personalBackground">Personal Background</label>
+                    <textarea id="personalBackground" name="personalBackground" required></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="professionalBackground">Professional Background</label>
+                    <textarea id="professionalBackground" name="professionalBackground" required></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="academicBackground">Academic Background</label>
+                    <textarea id="academicBackground" name="academicBackground" required></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="subjectBackground">Background in this Subject</label>
+                    <textarea id="subjectBackground" name="subjectBackground" required></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="primaryComputer">Primary Work Computer</label>
+                    <textarea id="primaryComputer" name="primaryComputer" required></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="operatingSystem">Operating System &amp; Version</label>
+                    <textarea id="operatingSystem" name="operatingSystem" required></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="backupComputer">Backup Work Computer &amp; Location Plan</label>
+                    <textarea id="backupComputer" name="backupComputer" required></textarea>
+                </div>
+            </section>
+
+            <section class="form-section" aria-labelledby="courses-section-title">
+                <h3 class="form-section-title" id="courses-section-title">Courses I'm Taking &amp; Why</h3>
+
+                <div id="courses-container" aria-live="polite"></div>
+
+                <button type="button" id="addCourseButton">Add Course</button>
+            </section>
+
+            <section class="form-section" aria-labelledby="extras-section-title">
+                <h3 class="form-section-title" id="extras-section-title">Quote and Extras</h3>
+
+                <div class="form-field">
+                    <label for="quote">Quote</label>
+                    <input type="text" id="quote" name="quote" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="quoteAuthor">Quote Author</label>
+                    <input type="text" id="quoteAuthor" name="quoteAuthor" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="funnyThing" class="optional-label">Funny/Interesting Item to Remember Me By</label>
+                    <textarea id="funnyThing" name="funnyThing"></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="shareThing" class="optional-label">Something I Would Like to Share</label>
+                    <textarea id="shareThing" name="shareThing"></textarea>
+                </div>
+            </section>
+
+            <section class="form-section" aria-labelledby="social-section-title">
+                <h3 class="form-section-title" id="social-section-title">Footer/Social Links</h3>
+
+                <div class="form-field">
+                    <label for="socialLabel1">Link 1 Label</label>
+                    <input type="text" id="socialLabel1" name="socialLabel1" required>
+                    <label for="socialUrl1">Link 1 URL</label>
+                    <input type="url" id="socialUrl1" name="socialUrl1" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="socialLabel2">Link 2 Label</label>
+                    <input type="text" id="socialLabel2" name="socialLabel2" required>
+                    <label for="socialUrl2">Link 2 URL</label>
+                    <input type="url" id="socialUrl2" name="socialUrl2" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="socialLabel3">Link 3 Label</label>
+                    <input type="text" id="socialLabel3" name="socialLabel3" required>
+                    <label for="socialUrl3">Link 3 URL</label>
+                    <input type="url" id="socialUrl3" name="socialUrl3" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="socialLabel4">Link 4 Label</label>
+                    <input type="text" id="socialLabel4" name="socialLabel4" required>
+                    <label for="socialUrl4">Link 4 URL</label>
+                    <input type="url" id="socialUrl4" name="socialUrl4" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="socialLabel5">Link 5 Label</label>
+                    <input type="text" id="socialLabel5" name="socialLabel5" required>
+                    <label for="socialUrl5">Link 5 URL</label>
+                    <input type="url" id="socialUrl5" name="socialUrl5" required>
+                </div>
+            </section>
+
+            <p id="formError" class="form-error" role="alert" hidden></p>
+
+            <div class="form-actions">
+                <button type="button" id="generateHtmlButton" class="button-secondary">Generate HTML</button>
+                <button type="button" id="generateJsonButton" class="button-secondary">Generate JSON</button>
+                <button type="button" id="generateXmlButton" class="button-secondary">Generate XML</button>
+                <button type="submit">Submit</button>
+                <button type="button" id="resetFormButton" class="button-secondary">Reset</button>
+                <button type="button" id="clearFormButton" class="button-secondary">Clear</button>
+            </div>
+
+            <div id="generated-output-container"></div>
+        </form>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="scripts/htmlinclude.js"></script>
+    <script src="scripts/introduction.js"></script>
+
+</body>
+</html>

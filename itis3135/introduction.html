@@ -3,12 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction</title>
+    <link rel="icon" href="../favicon.ico">
+
+    <title>ITIS 3135 | Neha Kamichetty | Nice Panda | Introduction</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/default.css">
 
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+    <style>
+        .introduction-page main {
+            max-width: 720px;
+            padding: 2rem 1.75rem;
+        }
+
+        .introduction-page main p,
+        .introduction-page main li,
+        .introduction-page main figcaption,
+        .introduction-page main blockquote,
+        .introduction-page .privacy-notice {
+            font-family: "Comfortaa", Arial, sans-serif;
+            line-height: 1.8;
+        }
+
+        .introduction-page .page-title {
+            font-family: Georgia, serif;
+            color: #883128;
+            font-size: 2.25rem;
+            text-align: center;
+            margin: 0 0 1.75rem;
+            border-bottom: none;
+            display: block;
+            padding-bottom: 0;
+        }
+
+        .introduction-page .intro-photo {
+            margin: 0 auto 1.5rem;
+            text-align: center;
+            max-width: 280px;
+        }
+
+        .introduction-page .intro-photo img {
+            width: 280px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(58, 31, 27, 0.22);
+            display: block;
+            margin: 0 auto;
+        }
+
+        .introduction-page .intro-photo figcaption {
+            margin-top: 0.75rem;
+            font-style: italic;
+            color: #6d4a44;
+            font-size: 0.95rem;
+        }
+
+        .introduction-page .privacy-notice {
+            background-color: #fff8f9;
+            border-left: 4px solid #883128;
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            margin: 0 0 1.75rem;
+            box-shadow: 0 2px 8px rgba(136, 49, 40, 0.08);
+        }
+
+        .introduction-page .privacy-notice p {
+            margin: 0;
+        }
+
+        .introduction-page .privacy-notice .signature {
+            display: block;
+            margin-top: 0.5rem;
+            font-weight: 600;
+            color: #883128;
+        }
+
+        .introduction-page .intro-lead {
+            margin: 0 0 2rem;
+            font-size: 1rem;
+        }
+
+        .introduction-page .intro-details {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .introduction-page .intro-details li {
+            margin-bottom: 1.35rem;
+            padding-bottom: 1.35rem;
+            border-bottom: 1px solid #e8c4c8;
+        }
+
+        .introduction-page .intro-details li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .introduction-page .intro-details strong {
+            display: block;
+            color: #883128;
+            margin-bottom: 0.35rem;
+            font-family: Georgia, serif;
+        }
+
+        .introduction-page .intro-quote {
+            margin: 2.5rem 0 0;
+            padding: 1.75rem 1.25rem 0;
+            border-top: 2px solid #cc8b84;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .introduction-page .intro-quote p {
+            margin: 0 0 0.5rem;
+            font-size: 1.15rem;
+            color: #883128;
+        }
+
+        .introduction-page .intro-quote footer {
+            font-style: normal;
+            font-weight: 600;
+            color: #6d4a44;
+        }
+
+        @media (max-width: 600px) {
+            .introduction-page main {
+                padding: 1.5rem 1.15rem;
+            }
+
+            .introduction-page .page-title {
+                font-size: 1.85rem;
+            }
+        }
+    </style>
 </head>
 
-<body>
-    <h1>Introduction Page</h1>
+<body class="introduction-page">
+
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2 class="page-title">Introduction</h2>
+
+        <figure class="intro-photo">
+            <img src="images/neha-introduction.jpg"
+                 alt="Neha Kamichetty smiling in a restaurant mirror while holding a phone."
+                 width="280">
+            <figcaption>In a restaurant mirror</figcaption>
+        </figure>
+
+        <aside class="privacy-notice" aria-label="Public posting agreement">
+            <p>
+                &ldquo;I understand that what I post here is publicly viewable and won't post anything I don't want public here.&rdquo;
+                <span class="signature">&mdash; NK &mdash; 06/18/2026</span>
+            </p>
+        </aside>
+
+        <p class="intro-lead">
+            Hello everyone! My name is Neha Kamichetty. I am currently a student at UNC Charlotte and I am excited
+            to continue developing my web development skills. I enjoy learning new technologies, working on creative
+            projects, and building experiences that can help me in my future career.
+        </p>
+
+        <ul class="intro-details">
+            <li>
+                <strong>Name:</strong>
+                Neha Kamichetty | Nice Kangaroo
+            </li>
+
+            <li>
+                <strong>Personal Background:</strong>
+                I was born in India and moved to the United States when I was 5 because of my dad's job.
+                I lived in Irvine, California for 3 years before moving to North Carolina where I have lived ever since.
+                I enjoy spending time with friends, traveling, and exploring new opportunities.
+            </li>
+
+            <li>
+                <strong>Professional Background:</strong>
+                I have experience working as a tutor and interning at a startup.
+            </li>
+
+            <li>
+                <strong>Academic Background:</strong>
+                I am a rising senior at UNC Charlotte pursuing a Bachelor's degree in Computer Science
+                while continuing to expand my technical skills.
+            </li>
+
+            <li>
+                <strong>Background in this Subject:</strong>
+                I previously took this course, but I wasn't able to complete the assignments due to personal circumstances.
+            </li>
+
+            <li>
+                <strong>Primary Work Computer:</strong>
+                Windows laptop.
+            </li>
+
+            <li>
+                <strong>Operating System &amp; Version:</strong>
+                Windows 11.
+            </li>
+
+            <li>
+                <strong>Backup Work Computer &amp; Location Plan:</strong>
+                Going to the public library near me and working on the computers there.
+            </li>
+
+            <li>
+                <strong>Courses I'm Taking &amp; Why:</strong>
+                ITIS 3135 &ndash; Front-End Web Application Development:
+                To strengthen my HTML, CSS, and JavaScript skills. And I need the credit!
+            </li>
+
+            <li>
+                <strong>Funny/Interesting Item to Remember Me By:</strong>
+                I accidentally fell asleep at a 6 a.m. yoga class and woke up to the instructor laughing.
+            </li>
+
+            <li>
+                <strong>I'd Like to Share:</strong>
+                I speak 4 languages!
+            </li>
+        </ul>
+
+        <blockquote class="intro-quote">
+            <p>&ldquo;Be curious, not judgmental.&rdquo;</p>
+            <footer>&mdash; Walt Whitman</footer>
+        </blockquote>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="scripts/htmlinclude.js"></script>
+
 </body>
 </html>

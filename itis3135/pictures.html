@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon.ico">
+
+    <title>ITIS 3135 | Neha Kamichetty | Nice Panda | Pictures</title>
+
+    <link rel="stylesheet" href="styles/default.css">
+
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+    <style>
+        .pictures-page section {
+            margin-bottom: 2rem;
+        }
+
+        .pictures-page section > p {
+            line-height: 1.7;
+        }
+
+        .pictures-page article {
+            margin: 1.5rem 0;
+            padding: 1rem 0;
+            border-top: 1px solid #e8c4c8;
+        }
+
+        .pictures-page article:first-of-type {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .pictures-page .section-title {
+            color: #883128;
+        }
+
+        .pictures-page .article-title {
+            color: #883128;
+            font-family: Georgia, serif;
+            margin-bottom: 0.75rem;
+        }
+
+        .pictures-page figure {
+            margin: 1rem 0;
+            background-color: #fff8f9;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(58, 31, 27, 0.08);
+        }
+
+        .pictures-page figure img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 6px;
+        }
+
+        .pictures-page figcaption {
+            margin-top: 0.75rem;
+            font-size: 0.95rem;
+            color: #6d4a44;
+            text-align: center;
+        }
+
+        .pictures-page .css-downsize {
+            width: 200px;
+            height: auto;
+        }
+
+        .pictures-page .css-improper-proportions {
+            width: 400px;
+            height: 120px;
+        }
+
+        .pictures-page .css-improper-enlarge {
+            width: 900px;
+            height: auto;
+        }
+
+        .pictures-page .submission-notes {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #cc8b84;
+        }
+
+        .pictures-page hr {
+            border: none;
+            border-top: 2px solid #cc8b84;
+            margin: 2.5rem 0;
+        }
+    </style>
+</head>
+
+<body class="pictures-page">
+
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>Everything Pictures</h2>
+
+        <p>
+            This page demonstrates how images work on the web by comparing file formats, dimensions, file sizes,
+            proportions, resizing methods, and the difference between proper editing and improper CSS-only changes.
+            The goal is to show how image choices affect quality, performance, and appearance in a real website.
+        </p>
+
+        <!-- ============================================================
+             SECTION 1: PEXELS IMAGE
+             Replace the placeholder text below with your actual Pexels
+             image details: photographer name, source URL, format, pixel
+             dimensions, and file size.
+             ============================================================ -->
+        <section aria-labelledby="pexels-section-title">
+            <h3 class="section-title" id="pexels-section-title">Section 1: Pexels Image</h3>
+
+            <p>
+                <!-- REPLACE: Describe why you chose this Pexels image. -->
+                I chose this image from
+                <!-- REPLACE: Add the actual Pexels photographer name. -->
+                <a href="https://www.pexels.com/" target="_blank" rel="noopener noreferrer">Pexels</a>
+                because it clearly shows color, detail, and contrast, which makes it useful for comparing
+                format conversions and resizing methods.
+                <!-- REPLACE: Photographer name, for example: Photo by Jane Doe on Pexels -->
+                Photographer: [Replace with photographer name].
+                Source:
+                <!-- REPLACE: Add your actual Pexels photo URL. -->
+                <a href="https://www.pexels.com/" target="_blank" rel="noopener noreferrer">[Replace with Pexels photo URL]</a>.
+                Original format: JPG.
+                <!-- REPLACE: Add actual pixel dimensions, for example: 1920 x 1280 pixels -->
+                Dimensions: [Replace with width x height in pixels].
+                <!-- REPLACE: Add actual file size, for example: 245 KB -->
+                File size: [Replace with file size in KB].
+            </p>
+
+            <article aria-labelledby="pexels-original-title">
+                <h4 class="article-title" id="pexels-original-title">Original Image</h4>
+                <p>
+                    This is the original downloaded image before any conversion, CSS changes, or editor resizing.
+                </p>
+                <figure>
+                    <!-- REPLACE filename: images/pexels-image-original.jpg -->
+                    <!-- REPLACE alt text with a specific description of your chosen Pexels photo -->
+                    <!-- REPLACE width/height attributes if you want fixed dimensions displayed -->
+                    <img src="images/pexels-image-original.jpg"
+                         alt="Original Pexels photo used for the pictures assignment"
+                         width="600"
+                         height="400">
+                    <!-- REPLACE figcaption with your actual caption -->
+                    <figcaption>Original Pexels image — [Replace with caption]</figcaption>
+                </figure>
+            </article>
+
+            <article aria-labelledby="pexels-formats-title">
+                <h4 class="article-title" id="pexels-formats-title">Format Conversions</h4>
+                <p>
+                    These versions show how changing the image format affects appearance and file size.
+                </p>
+
+                <figure>
+                    <!-- REPLACE filename: images/pexels-image-original.gif -->
+                    <img src="images/pexels-image-original.gif"
+                         alt="Pexels image converted to GIF format"
+                         width="600"
+                         height="400">
+                    <!-- REPLACE: Add GIF file size and note why it looks different -->
+                    <figcaption>GIF version — [Replace with file size and notes]</figcaption>
+                </figure>
+
+                <figure>
+                    <!-- REPLACE filename: images/pexels-image-greyscale.jpg -->
+                    <img src="images/pexels-image-greyscale.jpg"
+                         alt="Pexels image converted to greyscale JPG"
+                         width="600"
+                         height="400">
+                    <!-- REPLACE: Add greyscale JPG file size -->
+                    <figcaption>Greyscale JPG — [Replace with file size and notes]</figcaption>
+                </figure>
+
+                <figure>
+                    <!-- REPLACE filename: images/pexels-image-black-white.jpg -->
+                    <img src="images/pexels-image-black-white.jpg"
+                         alt="Pexels image converted to black and white JPG"
+                         width="600"
+                         height="400">
+                    <!-- REPLACE: Add black and white JPG file size -->
+                    <figcaption>Black and white JPG — [Replace with file size and notes]</figcaption>
+                </figure>
+            </article>
+
+            <article aria-labelledby="pexels-css-downsize-title">
+                <h4 class="article-title" id="pexels-css-downsize-title">Downsizing Images with CSS</h4>
+                <p>
+                    This version uses CSS to display the original image smaller in the browser without creating
+                    a new file. The full-size file is still downloaded.
+                </p>
+                <figure>
+                    <!-- Uses the same original file; CSS class controls display size -->
+                    <img src="images/pexels-image-original.jpg"
+                         class="css-downsize"
+                         alt="Pexels image downsized using CSS width only"
+                         width="600"
+                         height="400">
+                    <!-- REPLACE: Mention CSS width used and that file size did not change -->
+                    <figcaption>CSS downsized display — width set to 200px — [Replace with notes]</figcaption>
+                </figure>
+            </article>
+
+            <article aria-labelledby="pexels-editor-reduce-title">
+                <h4 class="article-title" id="pexels-editor-reduce-title">Proper Reduction of Image with Editor</h4>
+                <p>
+                    This version was resized in an image editor so the saved file is actually smaller in both
+                    dimensions and file size.
+                </p>
+                <figure>
+                    <!-- REPLACE filename: images/pexels-image-600x400.jpg -->
+                    <!-- REPLACE dimensions and file size in figcaption -->
+                    <img src="images/pexels-image-600x400.jpg"
+                         alt="Pexels image properly reduced to 600 by 400 pixels in an image editor"
+                         width="600"
+                         height="400">
+                    <figcaption>Editor-reduced image — 600 x 400 pixels — [Replace with file size]</figcaption>
+                </figure>
+            </article>
+
+            <article aria-labelledby="pexels-css-proportions-title">
+                <h4 class="article-title" id="pexels-css-proportions-title">Improper Image Proportions with CSS</h4>
+                <p>
+                    This version uses mismatched CSS width and height values, which stretches the image and
+                    distorts its proportions.
+                </p>
+                <figure>
+                    <!-- Uses original file with improper CSS proportions -->
+                    <img src="images/pexels-image-original.jpg"
+                         class="css-improper-proportions"
+                         alt="Pexels image displayed with improper stretched proportions using CSS"
+                         width="600"
+                         height="400">
+                    <!-- REPLACE: Mention the incorrect CSS width and height used -->
+                    <figcaption>Improper CSS proportions — width 400px, height 120px — [Replace with notes]</figcaption>
+                </figure>
+            </article>
+
+            <article aria-labelledby="pexels-css-enlarge-title">
+                <h4 class="article-title" id="pexels-css-enlarge-title">Improper Enlarging with CSS</h4>
+                <p>
+                    This version enlarges a smaller image using CSS only, which can make the image look blurry
+                    because the browser is scaling up limited pixel data.
+                </p>
+                <figure>
+                    <!-- Uses the editor-reduced/smaller file and enlarges it with CSS -->
+                    <img src="images/pexels-image-600x400.jpg"
+                         class="css-improper-enlarge"
+                         alt="Pexels image improperly enlarged using CSS beyond its actual pixel dimensions"
+                         width="600"
+                         height="400">
+                    <!-- REPLACE: Mention CSS width used and quality loss -->
+                    <figcaption>Improper CSS enlargement — width set to 900px — [Replace with notes]</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- ============================================================
+             SECTION 2: PERSONAL GEOMETRY IMAGE
+             Replace the placeholder text below with details about your
+             personal geometry photo: why you chose it, format, dimensions,
+             and file size.
+             ============================================================ -->
+        <section aria-labelledby="personal-section-title">
+            <h3 class="section-title" id="personal-section-title">Section 2: Personal Geometry Image</h3>
+
+            <p>
+                <!-- REPLACE: Explain why you chose your personal geometry image -->
+                I chose this personal geometry image because it contains clear lines, shapes, and angles that
+                make it easy to see when proportions or resizing are handled correctly or incorrectly.
+                Original format: JPG.
+                <!-- REPLACE: Add actual pixel dimensions -->
+                Dimensions: [Replace with width x height in pixels].
+                <!-- REPLACE: Add actual file size -->
+                File size: [Replace with file size in KB].
+            </p>
+
+            <article aria-labelledby="personal-original-title">
+                <h4 class="article-title" id="personal-original-title">Original Image</h4>
+                <p>
+                    This is my original personal geometry photo before any conversion, CSS changes, or editor resizing.
+                </p>
+                <figure>
+                    <!-- REPLACE filename: images/personal-geometry-original.jpg -->
+                    <!-- REPLACE alt text with a specific description of your geometry photo -->
+                    <img src="images/personal-geometry-original.jpg"
+                         alt="Original personal geometry photo used for the pictures assignment"
+                         width="600"
+                         height="400">
+                    <!-- REPLACE figcaption with your actual caption -->
+                    <figcaption>Original personal geometry image — [Replace with caption]</figcaption>
+                </figure>
+            </article>
+
+            <article aria-labelledby="personal-formats-title">
+                <h4 class="article-title" id="personal-formats-title">Format Conversions</h4>
+                <p>
+                    These versions show format changes for the personal geometry image.
+                </p>
+
+                <figure>
+                    <!-- REPLACE filename: images/personal-geometry-original.gif -->
+                    <img src="images/personal-geometry-original.gif"
+                         alt="Personal geometry image converted to GIF format"
+                         width="600"
+                         height="400">
+                    <figcaption>GIF version — [Replace with file size and notes]</figcaption>
+                </figure>
+
+                <figure>
+                    <!-- REPLACE filename: images/personal-geometry-greyscale.jpg -->
+                    <img src="images/personal-geometry-greyscale.jpg"
+                         alt="Personal geometry image converted to greyscale JPG"
+                         width="600"
+                         height="400">
+                    <figcaption>Greyscale JPG — [Replace with file size and notes]</figcaption>
+                </figure>
+
+                <figure>
+                    <!-- REPLACE filename: images/personal-geometry-black-white.jpg -->
+                    <img src="images/personal-geometry-black-white.jpg"
+                         alt="Personal geometry image converted to black and white JPG"
+                         width="600"
+                         height="400">
+                    <figcaption>Black and white JPG — [Replace with file size and notes]</figcaption>
+                </figure>
+            </article>
+
+            <article aria-labelledby="personal-css-downsize-title">
+                <h4 class="article-title" id="personal-css-downsize-title">Downsizing Images with CSS</h4>
+                <p>
+                    This version uses CSS to display the original personal image smaller without saving a new file.
+                </p>
+                <figure>
+                    <img src="images/personal-geometry-original.jpg"
+                         class="css-downsize"
+                         alt="Personal geometry image downsized using CSS width only"
+                         width="600"
+                         height="400">
+                    <figcaption>CSS downsized display — width set to 200px — [Replace with notes]</figcaption>
+                </figure>
+            </article>
+
+            <article aria-labelledby="personal-editor-reduce-title">
+                <h4 class="article-title" id="personal-editor-reduce-title">Proper Reduction of Image with Editor</h4>
+                <p>
+                    This version was properly resized in an image editor and saved as a smaller file.
+                </p>
+                <figure>
+                    <!-- REPLACE filename: images/personal-geometry-600x400.jpg -->
+                    <!-- REPLACE dimensions and file size in figcaption -->
+                    <img src="images/personal-geometry-600x400.jpg"
+                         alt="Personal geometry image properly reduced to 600 by 400 pixels in an image editor"
+                         width="600"
+                         height="400">
+                    <figcaption>Editor-reduced image — 600 x 400 pixels — [Replace with file size]</figcaption>
+                </figure>
+            </article>
+
+            <article aria-labelledby="personal-css-proportions-title">
+                <h4 class="article-title" id="personal-css-proportions-title">Improper Image Proportions with CSS</h4>
+                <p>
+                    This version stretches the personal geometry image using mismatched CSS width and height values.
+                </p>
+                <figure>
+                    <img src="images/personal-geometry-original.jpg"
+                         class="css-improper-proportions"
+                         alt="Personal geometry image displayed with improper stretched proportions using CSS"
+                         width="600"
+                         height="400">
+                    <figcaption>Improper CSS proportions — width 400px, height 120px — [Replace with notes]</figcaption>
+                </figure>
+            </article>
+
+            <article aria-labelledby="personal-css-enlarge-title">
+                <h4 class="article-title" id="personal-css-enlarge-title">Improper Enlarging with CSS</h4>
+                <p>
+                    This version enlarges the smaller personal geometry image using CSS only, which reduces visual quality.
+                </p>
+                <figure>
+                    <img src="images/personal-geometry-600x400.jpg"
+                         class="css-improper-enlarge"
+                         alt="Personal geometry image improperly enlarged using CSS beyond its actual pixel dimensions"
+                         width="600"
+                         height="400">
+                    <figcaption>Improper CSS enlargement — width set to 900px — [Replace with notes]</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <section class="submission-notes" aria-labelledby="submission-notes-title">
+            <h3 class="section-title" id="submission-notes-title">Submission Notes</h3>
+
+            <h4 class="article-title">What AI Helped With</h4>
+            <p>
+                <!-- REPLACE: Describe how AI helped with this assignment -->
+                AI helped me organize the page structure, create semantic HTML sections and articles, write placeholder
+                comments for image details, and set up CSS examples for downsizing, improper proportions, and enlarging.
+            </p>
+
+            <h4 class="article-title">Challenges, Frustrations, and What I Learned</h4>
+            <p>
+                <!-- REPLACE: Add a few sentences about your own experience -->
+                One challenge was keeping track of all the different image versions and file sizes while making sure
+                each figure had the correct filename and caption. I learned that resizing with CSS only changes how
+                an image looks on the page, but properly reducing an image in an editor actually changes the file size
+                and can improve page performance.
+            </p>
+        </section>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="scripts/htmlinclude.js"></script>
+
+</body>
+</html>
