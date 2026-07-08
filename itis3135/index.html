@@ -5,7 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../favicon.ico">
 
-    <title>ITIS 3135 | Neha Kamichetty | Nice Panda | Home</title>
+    <title>ITIS 3135 | Neha Kamichetty | Nice Kangaroo | Home</title>
+
+    <script>
+        (function () {
+            var cltCourseHome = "https://webpages.charlotte.edu/nkamiche/itis3135/";
+
+            if (location.hostname.indexOf("github.io") !== -1) {
+                document.write('<meta http-equiv="refresh" content="0; url=' + cltCourseHome + '">');
+            }
+        })();
+    </script>
 
     <link rel="stylesheet" href="styles/default.css">
 
@@ -14,28 +24,54 @@
 
 <body>
 
-    <div data-include="components/header.html"></div>
-
-    <main>
-        <h2>About Me</h2>
-
+    <div id="github-redirect">
         <p>
-            My name is Neha Kamichetty. I am currently an upcoming senior at UNC Charlotte studying Computer Science.
-            I enjoy swimming, art, cybersecurity, software development, and learning new technologies.
+            Redirecting to the UNC Charlotte course site...
+            <a href="https://webpages.charlotte.edu/nkamiche/itis3135/">Click here if you are not redirected.</a>
         </p>
+    </div>
 
-        <p>
-            Welcome to my ITIS 3135 course website. Use the navigation links above to explore my coursework and assignments.
-        </p>
+    <div id="course-home" style="display: none;">
+        <div data-include="components/header.html"></div>
 
-        <p>
-            <a href="introduction.html">Go to my Introduction Page</a>
-        </p>
-    </main>
+        <main>
+            <h2>About Me</h2>
 
-    <div data-include="components/footer.html"></div>
+            <p>
+                My name is Neha Kamichetty. I am currently an upcoming senior at UNC Charlotte studying Computer Science.
+                I enjoy swimming, art, cybersecurity, software development, and learning new technologies.
+            </p>
 
-    <script src="scripts/htmlinclude.js"></script>
+            <p>
+                Welcome to my ITIS 3135 course website. Use the navigation links above to explore my coursework and assignments.
+            </p>
+
+            <p>
+                <a href="introduction.html">Go to my Introduction Page</a>
+            </p>
+        </main>
+
+        <div data-include="components/footer.html"></div>
+
+        <script src="scripts/htmlinclude.js"></script>
+
+        <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
+    </div>
+
+    <script>
+        (function () {
+            var cltCourseHome = "https://webpages.charlotte.edu/nkamiche/itis3135/";
+            var redirectBlock = document.getElementById("github-redirect");
+            var courseHome = document.getElementById("course-home");
+
+            if (location.hostname.indexOf("github.io") !== -1) {
+                window.location.replace(cltCourseHome);
+            } else {
+                redirectBlock.style.display = "none";
+                courseHome.style.display = "block";
+            }
+        })();
+    </script>
 
 </body>
 </html>

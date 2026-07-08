@@ -6,6 +6,8 @@
   <link rel="icon" href="../../favicon.ico">
   <title>Baking Bliss | Hobby Site</title>
 
+  <link rel="stylesheet" href="../styles/default.css">
+
   <style>
     body {
       margin: 0;
@@ -14,25 +16,36 @@
       color: #3d1f12;
     }
 
-    header, footer {
+    .course-header header,
+    .course-footer footer {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .hobby-site-header,
+    .hobby-site-footer {
       background-color: #7b2d26;
       color: #fff8f0;
       text-align: center;
       padding: 20px;
     }
 
-    h1, h2 {
+    .hobby-site-header h1,
+    .hobby-site-footer h2 {
       font-family: Georgia, serif;
     }
 
-    nav a, footer a {
+    .hobby-site-header nav a,
+    .hobby-site-footer nav a,
+    .hobby-site-footer a {
       color: #ffe8c2;
       text-decoration: none;
       margin: 0 8px;
       font-weight: bold;
     }
 
-    nav a:hover, footer a:hover {
+    .hobby-site-header nav a:hover,
+    .hobby-site-footer nav a:hover,
+    .hobby-site-footer a:hover {
       color: #ffffff;
       border-bottom: 2px solid #ffffff;
     }
@@ -41,6 +54,10 @@
       max-width: 950px;
       margin: 25px auto;
       padding: 20px;
+    }
+
+    main h2 {
+      font-family: Georgia, serif;
     }
 
     section {
@@ -111,7 +128,9 @@
 </head>
 
 <body>
-  <header>
+  <div class="course-header" data-include="../components/header.html"></div>
+
+  <header class="hobby-site-header">
     <h1>Baking Bliss</h1>
 
     <nav>
@@ -262,7 +281,7 @@
     </section>
   </main>
 
-  <footer>
+  <footer class="hobby-site-footer">
     <p>
       <a href="https://validator.w3.org/">HTML Validation</a>
       <span class="divider">✦</span>
@@ -278,6 +297,9 @@
     </p>
   </footer>
 
+  <div class="course-footer" data-include="../components/footer.html"></div>
+
+  <script src="../scripts/htmlinclude.js"></script>
   <script>
     function showSection(sectionId) {
       const sections = document.querySelectorAll("main section");
@@ -289,5 +311,7 @@
       document.getElementById(sectionId).classList.add("active");
     }
   </script>
+
+  <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
 </body>
 </html>

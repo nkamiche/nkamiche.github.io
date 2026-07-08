@@ -37,7 +37,7 @@
         shareThing: "I speak 4 languages!",
         socialLinks: [
             { label: "CLT Web", url: "https://webpages.charlotte.edu/nkamiche/" },
-            { label: "GitHub.io", url: "https://github.com/nkamiche/" },
+            { label: "GitHub.io", url: "https://nkamiche.github.io/" },
             { label: "GitHub", url: "https://github.com/nkamiche" },
             { label: "FreeCodeCamp", url: "https://www.freecodecamp.org/learn" },
             { label: "LinkedIn", url: "https://www.linkedin.com/in/nehakamichetty/" }
@@ -429,7 +429,8 @@
         `;
     }
 
-    function buildResultHtml(data) {
+    function buildResultHtml(data, pageTitle) {
+        const title = pageTitle || "Introduction";
         const initials = getInitials(data.firstName, data.middleName, data.lastName, data.nickname);
         const displayName = buildDisplayName(data);
         const coursesHtml = buildCoursesHtml(data.courses);
@@ -440,7 +441,7 @@
         const shareItem = buildOptionalListItem("I'd Like to Share:", data.shareThing);
 
         return `
-            <h2 class="page-title">Introduction Form</h2>
+            <h2 class="page-title">${escapeHtml(title)}</h2>
 
             <figure class="intro-photo">
                 <img src="${escapeHtml(data.pictureSrc)}"
@@ -598,15 +599,16 @@ ${innerContent}
     }
 
     function showResult(data) {
-        main.innerHTML = buildResultHtml(data);
-        document.title = "ITIS 3135 | Neha Kamichetty | Nice Kangaroo | Introduction Form";
+        main.innerHTML = buildResultHtml(data, "Introduction Form Result");
+        document.title = "ITIS 3135 | Neha Kamichetty | Nice Kangaroo | Introduction Form Result";
+        main.scrollIntoView({ behavior: "smooth", block: "start" });
 
         const fillFormAgain = document.getElementById("fillFormAgain");
 
         if (fillFormAgain) {
             fillFormAgain.addEventListener("click", function (event) {
                 event.preventDefault();
-                window.location.reload();
+                window.location.href = "introduction_form.html";
             });
         }
     }

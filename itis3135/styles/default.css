@@ -25,14 +25,14 @@ main {
     background-color: #f9eced;
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px #cccccc;
 }
 
 h2 {
     color: #883128;
     border-bottom: 2px solid #cc8b84;
     padding-bottom: 8px;
-    display: inline-block;
+    display: table;
 }
 
 nav a {
@@ -42,7 +42,7 @@ nav a {
 }
 
 .button {
-    display: inline-block;
+    display: table;
     background-color: #883128;
     color: white;
     padding: 12px 20px;
@@ -67,11 +67,9 @@ footer a {
     font-weight: bold;
 }
 
-footer a:hover {
-    text-decoration: underline;
-}
-
-nav a:hover {
+footer a:hover,
+nav a:hover,
+.doc-sidebar a:hover {
     text-decoration: underline;
 }
 
@@ -84,7 +82,7 @@ nav a:hover {
 .survey-form label {
     display: block;
     font-weight: bold;
-    margin: 1rem 0 0.35rem;
+    margin: 16px 0 6px 0;
     color: #883128;
 }
 
@@ -92,34 +90,32 @@ nav a:hover {
 .survey-form input[type="email"],
 .survey-form select,
 .survey-form textarea {
-    width: 100%;
-    max-width: 100%;
-    padding: 0.6rem 0.75rem;
+    display: block;
+    padding: 10px 12px;
     border: 1px solid #cc8b84;
     border-radius: 8px;
     font-family: Arial, sans-serif;
-    font-size: 1rem;
-    box-sizing: border-box;
+    font-size: 16px;
     background-color: #fff8f9;
 }
 
 .survey-form textarea {
     min-height: 120px;
-    resize: vertical;
+    overflow: auto;
 }
 
 .survey-form .checkbox-row {
-    margin: 1.25rem 0;
+    margin: 20px 0;
 }
 
 .survey-form .checkbox-row label {
     display: inline;
     font-weight: normal;
-    margin-left: 0.35rem;
+    margin-left: 6px;
 }
 
 .survey-form .form-actions {
-    margin-top: 1.5rem;
+    margin-top: 24px;
 }
 
 .survey-form button {
@@ -129,7 +125,7 @@ nav a:hover {
     padding: 12px 24px;
     border-radius: 8px;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 16px;
     cursor: pointer;
 }
 
@@ -137,43 +133,27 @@ nav a:hover {
     background-color: #6d251e;
 }
 
-.card-grid {
-    margin-top: 1.25rem;
-    overflow: hidden;
-}
-
-.card-grid .info-card {
-    float: left;
-    width: 220px;
-    max-width: 100%;
-    margin: 0 0.625rem 1.25rem;
-    box-sizing: border-box;
-}
-
 .info-card {
     background-color: #fff8f9;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px #cccccc;
 }
 
 .info-card-image {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
     display: block;
     background-color: #cc8b84;
 }
 
 .info-card-body {
-    padding: 1rem 1.15rem 1.25rem;
+    padding: 16px 18px 20px 18px;
 }
 
 .info-card-title {
     color: #883128;
     font-family: Georgia, serif;
-    margin: 0 0 0.5rem;
-    font-size: 1.1rem;
+    margin: 0 0 8px 0;
+    font-size: 18px;
 }
 
 .info-card-body p {
@@ -182,22 +162,21 @@ nav a:hover {
 }
 
 .inventory-table {
-    width: 100%;
     border-collapse: collapse;
-    margin-top: 1rem;
+    margin-top: 16px;
 }
 
 .inventory-table caption {
     text-align: left;
     font-weight: bold;
     color: #883128;
-    margin-bottom: 0.75rem;
+    margin-bottom: 12px;
 }
 
 .inventory-table th,
 .inventory-table td {
     border: 1px solid #cc8b84;
-    padding: 0.65rem 0.75rem;
+    padding: 10px 12px;
     text-align: left;
 }
 
@@ -206,31 +185,29 @@ nav a:hover {
     color: white;
 }
 
-.inventory-table tbody tr:nth-child(even) {
+.inventory-table tbody tr {
     background-color: #fff8f9;
 }
 
 .doc-layout {
-    margin-top: 1rem;
+    margin-top: 16px;
     overflow: hidden;
 }
 
 .doc-sidebar {
     float: left;
-    width: 180px;
     background-color: #fff8f9;
     border-radius: 10px;
-    padding: 1rem;
-    box-sizing: border-box;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-    margin: 0 1.5rem 1.5rem 0;
+    padding: 16px;
+    box-shadow: 0 2px 6px #dddddd;
+    margin: 0 24px 24px 0;
 }
 
 .doc-sidebar-title {
     color: #883128;
     font-family: Georgia, serif;
-    margin: 0 0 0.75rem;
-    font-size: 1rem;
+    margin: 0 0 12px 0;
+    font-size: 16px;
 }
 
 .doc-sidebar ul {
@@ -240,17 +217,13 @@ nav a:hover {
 }
 
 .doc-sidebar li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
 }
 
 .doc-sidebar a {
     color: #883128;
     text-decoration: none;
     font-weight: bold;
-}
-
-.doc-sidebar a:hover {
-    text-decoration: underline;
 }
 
 .doc-content {
@@ -260,12 +233,8 @@ nav a:hover {
 .doc-section-title {
     color: #883128;
     font-family: Georgia, serif;
-    margin: 1.5rem 0 0.75rem;
-    font-size: 1.15rem;
-}
-
-.doc-content .doc-section-title:first-child {
-    margin-top: 0;
+    margin: 24px 0 12px 0;
+    font-size: 18px;
 }
 
 .doc-content p,
@@ -275,23 +244,23 @@ nav a:hover {
 
 .product-hero {
     text-align: center;
-    padding: 0.5rem 0 1.5rem;
+    padding: 8px 0 24px 0;
     border-bottom: 2px solid #cc8b84;
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
 }
 
 .product-hero-title {
     color: #883128;
     font-family: Georgia, serif;
-    font-size: 1.75rem;
-    margin: 0 0 0.75rem;
+    font-size: 28px;
+    margin: 0 0 12px 0;
     border-bottom: none;
     display: block;
     padding-bottom: 0;
 }
 
 .product-hero-tagline {
-    font-size: 1.05rem;
+    font-size: 17px;
     line-height: 1.7;
     margin: 0 auto;
     max-width: 560px;
@@ -300,42 +269,39 @@ nav a:hover {
 .product-section-title {
     color: #883128;
     font-family: Georgia, serif;
-    margin: 0 0 0.75rem;
-    font-size: 1.2rem;
+    margin: 0 0 12px 0;
+    font-size: 19px;
 }
 
 .feature-list,
 .testimonial-list {
-    padding-left: 1.25rem;
+    padding-left: 20px;
     line-height: 1.75;
 }
 
 .product-highlights {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
+    margin-top: 16px;
+    margin-bottom: 24px;
     overflow: hidden;
 }
 
 .product-highlights .highlight-box {
     float: left;
-    width: 200px;
-    max-width: 100%;
-    margin: 0.5rem;
-    box-sizing: border-box;
+    margin: 8px;
 }
 
 .highlight-box {
     background-color: #fff8f9;
     border-radius: 10px;
-    padding: 1rem 1.15rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    padding: 16px 18px;
+    box-shadow: 0 2px 6px #dddddd;
 }
 
 .highlight-box-title {
     color: #883128;
     font-family: Georgia, serif;
-    margin: 0 0 0.5rem;
-    font-size: 1.05rem;
+    margin: 0 0 8px 0;
+    font-size: 17px;
 }
 
 .highlight-box p {
@@ -346,14 +312,14 @@ nav a:hover {
 .testimonial-list blockquote {
     background-color: #fff8f9;
     border-left: 4px solid #883128;
-    margin: 0 0 1rem;
-    padding: 0.85rem 1rem;
+    margin: 0 0 16px 0;
+    padding: 14px 16px;
     border-radius: 0 8px 8px 0;
 }
 
 .testimonial-list cite {
     display: block;
-    margin-top: 0.35rem;
+    margin-top: 6px;
     font-style: normal;
     font-weight: bold;
     color: #883128;
@@ -362,27 +328,16 @@ nav a:hover {
 .contact-section {
     background-color: #fff8f9;
     border-radius: 10px;
-    padding: 1.25rem;
-    margin: 1.5rem 0;
+    padding: 20px;
+    margin: 24px 0;
 }
 
 .contact-section p {
-    margin: 0.35rem 0;
+    margin: 6px 0;
     line-height: 1.65;
 }
 
 .product-cta {
     text-align: center;
-    margin-top: 1.5rem;
-}
-
-@media (max-width: 600px) {
-    .doc-sidebar {
-        float: none;
-        width: 100%;
-    }
-
-    .inventory-table {
-        font-size: 0.9rem;
-    }
+    margin-top: 24px;
 }

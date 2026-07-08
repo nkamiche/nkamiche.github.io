@@ -5,13 +5,44 @@
             function isInViewport(element, offset) {
                 return element.getBoundingClientRect().top <= (+offset + w.innerHeight);
             }
+            function getIncludePrefix(includePath) {
+                var match = includePath.match(/^(\.\.\/)+/);
+                return match ? match[0] : "";
+            }
+
+            function fixRelativeLinks(html, prefix) {
+                if (!prefix) {
+                    return html;
+                }
+
+                var doc = new DOMParser().parseFromString(html, "text/html");
+                var links = doc.querySelectorAll("a[href]");
+
+                for (var i = 0; i < links.length; i += 1) {
+                    var href = links[i].getAttribute("href");
+
+                    if (!href || /^(https?:|mailto:|tel:|#|\/)/.test(href)) {
+                        continue;
+                    }
+
+                    if (href.indexOf("../") !== 0 && href.indexOf("./") !== 0) {
+                        links[i].setAttribute("href", prefix + href);
+                    }
+                }
+
+                return doc.body.innerHTML;
+            }
+
             function ajax(url, elements) {
                 fetch(url)
                     .then(response => response.text())
                     .then(text => {
                         elements.forEach(function(element) {
                             var dataReplace = element.getAttribute("data-replace");
-                            var z = text;
+                            var includePath = element.getAttribute("data-include") || url;
+                            var prefix = getIncludePrefix(includePath);
+                            var z = fixRelativeLinks(text, prefix);
+
                             if (dataReplace) {
                                 dataReplace.split(",").forEach(function(el) {
                                     var o = el.trim().split(":");
