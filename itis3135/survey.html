@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon.ico">
+
+    <title>ITIS 3135 | Neha Kamichetty | Nice Kangaroo | Survey</title>
+
+    <link rel="stylesheet" href="styles/default.css">
+
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>Survey</h2>
+
+        <p class="theme-tagline">
+            Help Kangaroo Adventure Outfitters improve your next outback experience.
+        </p>
+
+        <form class="survey-form" action="#" method="post">
+            <label for="customer-name">Name</label>
+            <input type="text" id="customer-name" name="customer-name" required>
+
+            <label for="customer-email">Email</label>
+            <input type="email" id="customer-email" name="customer-email" required>
+
+            <label for="favorite-product">Favorite Product</label>
+            <select id="favorite-product" name="favorite-product" required>
+                <option value="">Select a product</option>
+                <option value="outback-trail-pack">Outback Trail Pack</option>
+                <option value="joey-jump-training">Joey Jump Training Kit</option>
+                <option value="sunset-roo-safari">Sunset Roo Safari Tour</option>
+                <option value="pouch-pack-rental">Pouch Pack Rental</option>
+                <option value="billabong-base-camp">Billabong Base Camp Pass</option>
+            </select>
+
+            <label for="visit-frequency">Visit Frequency</label>
+            <select id="visit-frequency" name="visit-frequency" required>
+                <option value="">How often do you visit?</option>
+                <option value="first-time">First-time visitor</option>
+                <option value="monthly">Once a month</option>
+                <option value="quarterly">Every few months</option>
+                <option value="yearly">Once a year</option>
+            </select>
+
+            <label for="comments">Comments</label>
+            <textarea id="comments" name="comments" placeholder="Tell us about your kangaroo adventure..."></textarea>
+
+            <div class="checkbox-row">
+                <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                <label for="newsletter">Sign me up for the Kangaroo Adventure newsletter</label>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit">Submit Survey</button>
+            </div>
+        </form>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="scripts/htmlinclude.js"></script>
+
+</body>
+</html>
