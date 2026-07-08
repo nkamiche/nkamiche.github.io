@@ -138,15 +138,14 @@ nav a:hover {
 }
 
 .card-grid {
-    display: flex;
-    flex-wrap: wrap;
     margin-top: 1.25rem;
-    margin-left: -0.625rem;
-    margin-right: -0.625rem;
+    overflow: hidden;
 }
 
-.card-grid > * {
-    flex: 1 1 220px;
+.card-grid .info-card {
+    float: left;
+    width: 220px;
+    max-width: 100%;
     margin: 0 0.625rem 1.25rem;
     box-sizing: border-box;
 }
@@ -212,16 +211,17 @@ nav a:hover {
 }
 
 .doc-layout {
-    display: flex;
-    flex-wrap: wrap;
     margin-top: 1rem;
+    overflow: hidden;
 }
 
 .doc-sidebar {
-    flex: 0 0 180px;
+    float: left;
+    width: 180px;
     background-color: #fff8f9;
     border-radius: 10px;
     padding: 1rem;
+    box-sizing: border-box;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
     margin: 0 1.5rem 1.5rem 0;
 }
@@ -254,7 +254,7 @@ nav a:hover {
 }
 
 .doc-content {
-    flex: 1 1 320px;
+    overflow: hidden;
 }
 
 .doc-section-title {
@@ -311,16 +311,15 @@ nav a:hover {
 }
 
 .product-highlights {
-    display: flex;
-    flex-wrap: wrap;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
+    overflow: hidden;
 }
 
-.product-highlights > * {
-    flex: 1 1 200px;
+.product-highlights .highlight-box {
+    float: left;
+    width: 200px;
+    max-width: 100%;
     margin: 0.5rem;
     box-sizing: border-box;
 }
@@ -379,7 +378,8 @@ nav a:hover {
 
 @media (max-width: 600px) {
     .doc-sidebar {
-        flex: 1 1 100%;
+        float: none;
+        width: 100%;
     }
 
     .inventory-table {
