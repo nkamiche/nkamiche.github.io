@@ -1,0 +1,174 @@
+body {
+    background-color: #e9b3b7;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #3a1f1b;
+}
+
+header {
+    max-width: 960px;
+    margin: 30px auto 0;
+    background-color: #f9eced;
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+h1 {
+    color: #883128;
+    font-family: Georgia, serif;
+    margin: 0 0 0.75rem;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto 25px;
+    padding: 0 20px 25px;
+}
+
+h2 {
+    color: #883128;
+    font-family: Georgia, serif;
+    border-bottom: 2px solid #cc8b84;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+nav a {
+    color: #883128;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem 0 1.5rem;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    display: block;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin: 0 0 0.75rem;
+}
+
+.hero-tagline {
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.about-card {
+    background-color: #f9eced;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.75rem;
+}
+
+.about-card p {
+    line-height: 1.7;
+    margin: 1rem 0 0;
+}
+
+.interests {
+    margin-bottom: 2rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+}
+
+.interest-card {
+    background-color: #f9eced;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.interest-card-title {
+    color: #883128;
+    font-family: Georgia, serif;
+    margin: 0 0 0.75rem;
+    font-size: 1.15rem;
+}
+
+.interest-card p {
+    margin: 0;
+    line-height: 1.65;
+}
+
+.course-link {
+    text-align: center;
+    padding: 0.5rem 0 1rem;
+}
+
+.button {
+    display: inline-block;
+    background-color: #883128;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #6d251e;
+}
+
+footer {
+    color: #883128;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #883128;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width: 600px) {
+    header {
+        margin-top: 20px;
+        padding: 24px 18px;
+    }
+
+    main {
+        padding: 0 16px 20px;
+    }
+
+    .hero h2 {
+        font-size: 1.65rem;
+    }
+
+    .about-card,
+    .interest-card {
+        padding: 1.25rem;
+    }
+}

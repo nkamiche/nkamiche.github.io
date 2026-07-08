@@ -3,29 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neha Kamichetty | About Me</title>
+  <title>Neha Kamichetty | Home</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
   <header>
     <h1>Neha Kamichetty</h1>
 
     <nav>
-      <a href="index.html">Home</a> |
-      <a href="contract.html">Contract</a>
+      <a href="./">Home</a>
     </nav>
   </header>
 
   <main>
-    <h2>About Me</h2>
+    <section class="hero" aria-labelledby="welcome-title">
+      <h2 id="welcome-title">Welcome to My Personal Site</h2>
+      <p class="hero-tagline">
+        Hi, I'm Neha — a UNC Charlotte student passionate about technology, creativity, and building meaningful projects.
+      </p>
+    </section>
 
-    <p>
-      My name is Neha Kamichetty. I am currently a junior at UNC Charlotte. I like swimming and art.
-    </p>
+    <section class="about-card" aria-labelledby="about-title">
+      <h2 id="about-title">About Me</h2>
+      <p>
+        My name is Neha Kamichetty. I'm a Computer Science student at UNC Charlotte with a concentration in
+        Cybersecurity. I enjoy software development, learning new technologies, swimming, art, and building
+        creative projects.
+      </p>
+    </section>
 
-    <p>
-      Visit my <a href="itis3135/">ITIS 3135 Course Site</a> to view my assignments and coursework.
-    </p>
+    <section class="interests" aria-labelledby="interests-title">
+      <h2 id="interests-title" class="visually-hidden">My Interests</h2>
 
+      <div class="card-grid">
+        <article class="interest-card">
+          <h3 class="interest-card-title">🎨 Art</h3>
+          <p>I enjoy drawing, digital art, and creative design.</p>
+        </article>
+
+        <article class="interest-card">
+          <h3 class="interest-card-title">🏊 Swimming</h3>
+          <p>Swimming is one of my favorite hobbies and helps me stay active.</p>
+        </article>
+
+        <article class="interest-card">
+          <h3 class="interest-card-title">🔐 Cybersecurity</h3>
+          <p>
+            I'm studying Computer Science with a Cybersecurity concentration and enjoy learning how
+            technology and security work together.
+          </p>
+        </article>
+
+        <article class="interest-card">
+          <h3 class="interest-card-title">💻 Coding</h3>
+          <p>
+            I enjoy building websites, programming in Python and Java, and creating projects that solve
+            real problems.
+          </p>
+        </article>
+
+        <article class="interest-card">
+          <h3 class="interest-card-title">💡 Technology</h3>
+          <p>I enjoy learning about AI, software development, and exploring new technologies.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="course-link" aria-label="Course site link">
+      <a class="button" href="itis3135/">Go to my ITIS 3135 Course Site</a>
+    </section>
   </main>
 
   <footer>
