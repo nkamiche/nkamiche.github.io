@@ -117,6 +117,11 @@ nav a:hover,
     color: #883128;
 }
 
+.survey-photo {
+    max-width: 280px;
+    margin: 0 auto 20px;
+}
+
 .survey-form input[type="text"],
 .survey-form input[type="email"],
 .survey-form select,
