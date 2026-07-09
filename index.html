@@ -6,10 +6,18 @@
   <title>Neha Kamichetty | Home</title>
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="styles/default.css">
+
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <!--
+    Layout: hero, about-card, and interests sections organize the page.
+    card-grid and interest-card style the interest cards; hero-title and
+    about-title are heading helpers; visually-hidden hides the interests h2.
+  -->
   <header>
     <h1>Neha Kamichetty</h1>
+    <p><em>UNC Charlotte Computer Science student passionate about technology and creativity.</em></p>
 
     <nav>
       <a href="./">Home</a>
@@ -18,14 +26,14 @@
 
   <main>
     <section class="hero" aria-labelledby="welcome-title">
-      <h2 id="welcome-title">Welcome to My Personal Site</h2>
+      <h2 id="welcome-title" class="hero-title">Welcome to My Personal Site</h2>
       <p class="hero-tagline">
         Hi, I'm Neha — a UNC Charlotte student passionate about technology, creativity, and building meaningful projects.
       </p>
     </section>
 
     <section class="about-card" aria-labelledby="about-title">
-      <h2 id="about-title">About Me</h2>
+      <h2 id="about-title" class="about-title">About Me</h2>
       <p>
         My name is Neha Kamichetty. I'm a Computer Science student at UNC Charlotte with a concentration in
         Cybersecurity. I enjoy software development, learning new technologies, swimming, art, and building
@@ -77,14 +85,11 @@
 
   <footer>
     <nav>
-      <a href="https://webpages.charlotte.edu/nkamiche/">CLT Web</a> |
-      <a href="https://nkamiche.github.io/">GitHub.io</a> |
       <a href="https://github.com/nkamiche/">GitHub</a> |
-      <a href="https://lint.page/" target="_blank">Accumulus</a> |
-      <a href="https://www.freecodecamp.org/learn">FreeCodeCamp</a> |
-      <a href="https://www.codecademy.com/learn">Codecademy</a> |
       <a href="https://www.linkedin.com/in/nehakamichetty/">LinkedIn</a>
     </nav>
   </footer>
+
+  <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
 </body>
 </html>
