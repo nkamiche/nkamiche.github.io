@@ -119,6 +119,7 @@ header p {
 
 .button {
     display: table;
+    margin: 0 auto;
     background-color: #883128;
     /* white label text for contrast on the burgundy button */
     color: white;
