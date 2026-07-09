@@ -35,15 +35,46 @@ h2 {
     display: table;
 }
 
+main figure {
+    margin: 20px 0;
+    text-align: center;
+}
+
+main figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #cccccc;
+}
+
+main figcaption {
+    margin-top: 8px;
+    font-style: italic;
+    color: #6d4a44;
+}
+
 nav a {
     color: #883128;
     text-decoration: none;
     font-weight: bold;
 }
 
+header p em {
+    display: block;
+    margin: 0 0 16px;
+    font-style: italic;
+    color: #6d4a44;
+    font-size: 1rem;
+}
+
+.is-hidden {
+    display: none;
+}
+
 .button {
     display: table;
     background-color: #883128;
+    /* white button text for contrast on burgundy background */
     color: white;
     padding: 12px 20px;
     border-radius: 8px;
@@ -120,6 +151,7 @@ nav a:hover,
 
 .survey-form button {
     background-color: #883128;
+    /* white label text for contrast on burgundy submit button */
     color: white;
     border: none;
     padding: 12px 24px;
@@ -182,6 +214,7 @@ nav a:hover,
 
 .inventory-table th {
     background-color: #883128;
+    /* white header text for contrast on burgundy table header */
     color: white;
 }
 

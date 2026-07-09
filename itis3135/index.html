@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../favicon.ico">
+    <link rel="icon" href="images/favicon.ico">
 
-    <title>ITIS 3135 | Neha Kamichetty | Nice Kangaroo | Home</title>
+    <title>Neha Kamichetty's Nice Kangaroo | ITIS 3135 | Home</title>
 
     <script>
         (function () {
@@ -31,11 +31,18 @@
         </p>
     </div>
 
-    <div id="course-home" style="display: none;">
+    <div id="course-home" class="is-hidden">
         <div data-include="components/header.html"></div>
 
         <main>
             <h2>About Me</h2>
+
+            <figure>
+                <img src="images/neha-introduction.jpg"
+                     alt="Neha Kamichetty smiling in a restaurant mirror while holding a phone."
+                     width="280">
+                <figcaption>Neha Kamichetty — course homepage photo</figcaption>
+            </figure>
 
             <p>
                 My name is Neha Kamichetty. I am currently an upcoming senior at UNC Charlotte studying Computer Science.
@@ -67,8 +74,8 @@
             if (location.hostname.indexOf("github.io") !== -1) {
                 window.location.replace(cltCourseHome);
             } else {
-                redirectBlock.style.display = "none";
-                courseHome.style.display = "block";
+                redirectBlock.classList.add("is-hidden");
+                courseHome.classList.remove("is-hidden");
             }
         })();
     </script>

@@ -519,7 +519,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITIS 3135 | Neha Kamichetty | Nice Kangaroo | Introduction Form</title>
+    <title>Neha Kamichetty's Nice Kangaroo | ITIS 3135 | Introduction Form</title>
     <link rel="stylesheet" href="styles/default.css">
 </head>
 <body class="introduction-page">
