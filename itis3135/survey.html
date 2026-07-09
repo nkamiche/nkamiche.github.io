@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/default.css">
 
     <!-- survey-photo, theme-tagline, and survey-form use CSS classes in default.css; no inline style attributes -->
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous" type="text/plain" data-deferred-accumulus></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous" data-deferred-accumulus nomodule></script>
 </head>
 
 <body>
@@ -80,6 +80,9 @@
     <script>
         window.addEventListener("load", function () {
             setTimeout(function () {
+                if (window.accumulite || document.getElementById("ACCUMF")) {
+                    return;
+                }
                 var placeholder = document.querySelector("script[data-deferred-accumulus]");
                 if (!placeholder) {
                     return;
