@@ -83,6 +83,26 @@ header p {
     margin: 16px 0 0;
 }
 
+.about-photo {
+    margin: 16px auto 0;
+    text-align: center;
+    max-width: 280px;
+}
+
+.about-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #cccccc;
+}
+
+.about-photo figcaption {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #6d4a44;
+}
+
 .interests {
     margin-bottom: 32px;
 }
