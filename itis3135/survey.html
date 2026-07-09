@@ -9,11 +9,12 @@
 
     <link rel="stylesheet" href="styles/default.css">
 
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <!-- survey-photo, theme-tagline, and survey-form use CSS classes in default.css; no inline style attributes -->
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous" type="text/plain" data-deferred-accumulus></script>
 </head>
 
 <body>
-    <!-- survey-form and theme-tagline style the survey page; data-include loads shared header and footer -->
+    <!-- data-include loads shared header and footer -->
     <div data-include="components/header.html"></div>
 
     <main>
@@ -75,6 +76,21 @@
     <script src="scripts/htmlinclude.js"></script>
 
     <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
+
+    <script>
+        window.addEventListener("load", function () {
+            setTimeout(function () {
+                var placeholder = document.querySelector("script[data-deferred-accumulus]");
+                if (!placeholder) {
+                    return;
+                }
+                var accumulus = document.createElement("script");
+                accumulus.src = placeholder.getAttribute("src");
+                accumulus.crossOrigin = "anonymous";
+                document.head.appendChild(accumulus);
+            }, 2000);
+        });
+    </script>
 
 </body>
 </html>

@@ -120,6 +120,23 @@ nav a:hover,
 .survey-photo {
     max-width: 280px;
     margin: 0 auto 20px;
+    text-align: center;
+}
+
+.survey-photo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #cccccc;
+}
+
+.survey-photo figcaption {
+    margin-top: 8px;
+    font-style: italic;
+    color: #6d4a44;
+    font-size: 0.95rem;
 }
 
 .survey-form input[type="text"],
