@@ -398,16 +398,16 @@ nav a:hover,
 }
 
 .pictures-page section {
-    margin-bottom: 2rem;
+    margin-bottom: 32px;
 }
 
-.pictures-page section > p {
+.pictures-page section p {
     line-height: 1.7;
 }
 
 .pictures-page article {
-    margin: 1.5rem 0;
-    padding: 1rem 0;
+    margin: 24px 0;
+    padding: 16px 0;
     border-top: 1px solid #e8c4c8;
 }
 
@@ -423,15 +423,15 @@ nav a:hover,
 .pictures-page .article-title {
     color: #883128;
     font-family: Georgia, serif;
-    margin-bottom: 0.75rem;
+    margin-bottom: 12px;
 }
 
 .pictures-page figure {
-    margin: 1rem 0;
+    margin: 16px 0;
     background-color: #fff8f9;
-    padding: 1rem;
+    padding: 16px;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(58, 31, 27, 0.08);
+    box-shadow: 0 2px 6px #cccccc;
 }
 
 .pictures-page figure img {
@@ -443,24 +443,24 @@ nav a:hover,
 }
 
 .pictures-page figcaption {
-    margin-top: 0.75rem;
-    font-size: 0.95rem;
+    margin-top: 12px;
+    font-size: 15px;
     color: #6d4a44;
     text-align: center;
 }
 
 .pictures-page .image-format-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem 1.25rem;
-    margin: 1rem 0 1.5rem;
-    padding: 1rem;
+    margin: 16px 0 24px;
+    padding: 16px;
     background-color: #fff8f9;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(58, 31, 27, 0.08);
+    box-shadow: 0 2px 6px #cccccc;
 }
 
-.pictures-page .image-format-links a {
+.pictures-page .image-format-links a,
+.pictures-page .image-format-links span {
+    display: inline-block;
+    margin: 0 20px 12px 0;
     color: #883128;
     font-weight: bold;
     text-decoration: none;
@@ -471,28 +471,26 @@ nav a:hover,
 }
 
 .pictures-page .image-comparison-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin: 1rem 0;
+    margin: 16px 0;
+    overflow: hidden;
 }
 
 .pictures-page .image-comparison-grid figure {
-    flex: 1 1 220px;
-    min-width: 200px;
-    margin: 0;
+    float: left;
+    width: 220px;
+    margin: 0 16px 16px 0;
 }
 
 .pictures-page .submission-notes {
-    margin-top: 2rem;
-    padding-top: 1.5rem;
+    margin-top: 32px;
+    padding-top: 24px;
     border-top: 2px solid #cc8b84;
 }
 
 .pictures-page hr {
     border: none;
     border-top: 2px solid #cc8b84;
-    margin: 2.5rem 0;
+    margin: 40px 0;
 }
 
 .pictures-page .image-placeholder {
@@ -500,10 +498,7 @@ nav a:hover,
     background-color: #f0e0e2;
     border: 2px dashed #cc8b84;
     border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
+    padding: 24px;
     color: #6d4a44;
     font-style: italic;
     text-align: center;
@@ -512,7 +507,7 @@ nav a:hover,
 .pictures-page .pending-note {
     background-color: #fff8f9;
     border-left: 4px solid #883128;
-    padding: 1rem 1.25rem;
-    margin: 1rem 0 1.5rem;
+    padding: 16px 20px;
+    margin: 16px 0 24px;
     border-radius: 0 8px 8px 0;
 }
