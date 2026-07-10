@@ -396,3 +396,136 @@ nav a:hover,
     text-align: center;
     margin-top: 24px;
 }
+
+.pictures-page section {
+    margin-bottom: 32px;
+}
+
+.pictures-page section p {
+    line-height: 1.7;
+}
+
+.pictures-page article {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+}
+
+.pictures-page article + article {
+    padding-top: 16px;
+    border-top: 1px solid #e8c4c8;
+}
+
+.pictures-page .section-title {
+    color: #883128;
+}
+
+.pictures-page .article-title {
+    color: #883128;
+    font-family: Georgia, serif;
+    margin-bottom: 12px;
+}
+
+.pictures-page figure {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-color: #fff8f9;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px #cccccc;
+}
+
+.pictures-page figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 6px;
+}
+
+.pictures-page figcaption {
+    margin-top: 12px;
+    font-size: 15px;
+    color: #6d4a44;
+    text-align: center;
+}
+
+.pictures-page .image-format-links {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: 16px;
+    background-color: #fff8f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px #cccccc;
+}
+
+.pictures-page .image-format-links a {
+    color: #883128;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 20px;
+    margin-bottom: 12px;
+}
+
+.pictures-page .image-format-links a:hover {
+    text-decoration: underline;
+}
+
+.pictures-page .image-comparison-grid {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.pictures-page .image-comparison-grid figure {
+    float: left;
+    width: 220px;
+    margin-top: 0;
+    margin-right: 12px;
+    margin-bottom: 16px;
+    margin-left: 12px;
+}
+
+.pictures-page .image-comparison-grid img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pictures-page .submission-notes {
+    clear: both;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 2px solid #cc8b84;
+}
+
+.pictures-page hr {
+    clear: both;
+    border: none;
+    border-top: 2px solid #cc8b84;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.pictures-page .image-placeholder {
+    min-height: 180px;
+    background-color: #f0e0e2;
+    border: 2px dashed #cc8b84;
+    border-radius: 6px;
+    padding: 24px;
+    color: #6d4a44;
+    font-style: italic;
+    text-align: center;
+}
+
+.pictures-page .pending-note {
+    background-color: #fff8f9;
+    border-left: 4px solid #883128;
+    padding-top: 16px;
+    padding-right: 20px;
+    padding-bottom: 16px;
+    padding-left: 20px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    border-radius: 0 8px 8px 0;
+}
