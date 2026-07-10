@@ -196,97 +196,132 @@
         <hr>
 
         <section aria-labelledby="personal-section-title">
-            <h3 class="section-title" id="personal-section-title">Section 2: Personal Geometry Image</h3>
-
-            <p class="pending-note">
-                <strong>Personal image pending:</strong> The personal geometry photograph and all converted versions
-                still need to be added to the <code>images/</code> folder before this section can be completed.
-            </p>
+            <h3 class="section-title" id="personal-section-title">Demonstrating Image Manipulation with a Personal Geometry Photograph</h3>
 
             <p>
-                <!-- REPLACE: Explain why you chose your personal geometry image -->
-                I chose this personal geometry image because it contains clear lines, shapes, and angles that
-                make it easy to see when proportions or resizing are handled correctly or incorrectly.
-                Original format: [Replace with format].
-                Dimensions: [Replace with width x height in pixels].
-                File size: [Replace with file size].
+                This personal geometry photograph shows my hand holding a perfectly round bottle cap between my
+                fingers. I chose this image because the circular cap provides a clear reference shape that makes
+                it easy to see when image proportions become distorted during CSS resizing. Original format: JPEG.
+                Dimensions: 768 &times; 1024 pixels. File size: 34.49 KB.
             </p>
 
             <article aria-labelledby="personal-original-title">
                 <h4 class="article-title" id="personal-original-title">Original Image and Format Conversions</h4>
                 <p>
                     This is my original personal geometry photo before any conversion, CSS changes, or editor resizing.
+                    Converted versions are available as direct file links below.
                 </p>
                 <figure>
-                    <div class="image-placeholder" role="img" aria-label="Personal geometry original image placeholder">
-                        Personal geometry original image — file not yet added
-                    </div>
-                    <figcaption>Original personal geometry image — [Replace with caption]</figcaption>
+                    <img src="images/hand-holding-bottle-cap@neha-kamichetty.jpeg"
+                         alt="My hand holding a perfectly round bottle cap between my fingers against a neutral background"
+                         width="768"
+                         height="1024">
+                    <figcaption>
+                        Original personal geometry image — 768 &times; 1024 pixels — 34.49 KB
+                    </figcaption>
                 </figure>
 
                 <div class="image-format-links">
-                    <span>Original JPG — [Replace with file size]</span>
-                    <span>GIF Version — [Replace with file size]</span>
-                    <span>Grayscale Version — [Replace with file size]</span>
-                    <span>Black-and-White Version — [Replace with file size]</span>
+                    <a href="images/hand-holding-bottle-cap@neha-kamichetty.jpeg"
+                       target="_blank"
+                       rel="noopener noreferrer">Original JPEG (34.49 KB)</a>
+                    <a href="images/hand-holding-bottle-cap@neha-kamichetty.gif"
+                       target="_blank"
+                       rel="noopener noreferrer">GIF Version (129.99 KB)</a>
+                    <a href="images/hand-holding-bottle-cap-grayscale.jpeg"
+                       target="_blank"
+                       rel="noopener noreferrer">Grayscale Version (36.65 KB)</a>
+                    <a href="images/hand-holding-bottle-cap-black-white.jpeg"
+                       target="_blank"
+                       rel="noopener noreferrer">Black-and-White Version (43.01 KB)</a>
                 </div>
             </article>
 
             <article aria-labelledby="personal-css-downsize-title">
                 <h4 class="article-title" id="personal-css-downsize-title">Downsizing Images with CSS</h4>
                 <p>
-                    This version will use CSS to display the original personal image smaller without saving a new file.
+                    This version uses inline CSS to display the original image smaller in the browser without creating
+                    a new file. CSS changes only the display size; the file dimensions remain 768 &times; 1024 pixels,
+                    the file size remains 34.49 KB, and the browser still downloads the full linked file.
                 </p>
                 <figure>
-                    <div class="image-placeholder" role="img" aria-label="Personal geometry CSS downsizing placeholder">
-                        Personal geometry CSS downsizing example — file not yet added
-                    </div>
-                    <figcaption>CSS downsized display — width set to 200px — [Replace with notes]</figcaption>
+                    <img src="images/hand-holding-bottle-cap@neha-kamichetty.jpeg"
+                         style="width:200px;height:auto;"
+                         alt="Hand holding a bottle cap displayed at 200 pixels wide using inline CSS"
+                         width="768"
+                         height="1024">
+                    <figcaption>
+                        CSS downsized display — shown at 200px wide — source remains 768 &times; 1024 pixels and 34.49 KB
+                    </figcaption>
                 </figure>
             </article>
 
             <article aria-labelledby="personal-editor-reduce-title">
                 <h4 class="article-title" id="personal-editor-reduce-title">Proper Reduction of Image with Editor</h4>
                 <p>
-                    This version will be properly resized in an image editor and saved as a smaller file.
+                    This version was resized in an image editor so the saved file contains fewer pixels, a smaller
+                    download size, and the same aspect ratio. Editor resizing improves performance because the browser
+                    receives a file that matches the display size more closely instead of downloading a larger original
+                    and scaling it down in the browser.
                 </p>
                 <figure>
-                    <div class="image-placeholder" role="img" aria-label="Personal geometry editor-reduced image placeholder">
-                        Personal geometry editor-reduced image — file not yet added
-                    </div>
-                    <figcaption>Editor-reduced image — [Replace with dimensions] — [Replace with file size]</figcaption>
+                    <img src="images/hand-holding-bottle-cap-600w.jpeg"
+                         alt="Hand holding a bottle cap properly reduced to 600 by 800 pixels in an image editor"
+                         width="600"
+                         height="800">
+                    <figcaption>
+                        Editor-reduced image — 600 &times; 800 pixels — 52.79 KB
+                    </figcaption>
                 </figure>
             </article>
 
             <article aria-labelledby="personal-css-proportions-title">
                 <h4 class="article-title" id="personal-css-proportions-title">Improper Image Proportions with CSS</h4>
                 <p>
-                    These examples will stretch the personal geometry image using mismatched CSS width and height values.
+                    These examples use the properly resized 600 &times; 800 pixel image with mismatched CSS width and
+                    height values. At least one CSS dimension matches the source image in each example, but the other
+                    dimension is changed, which stretches the hand and bottle cap and distorts the round cap shape.
                 </p>
                 <div class="image-comparison-grid">
                     <figure>
-                        <div class="image-placeholder" role="img" aria-label="Personal geometry improper proportions example A placeholder">
-                            Example A — file not yet added
-                        </div>
-                        <figcaption>Example A — [Replace with CSS dimensions and notes]</figcaption>
+                        <img src="images/hand-holding-bottle-cap-600w.jpeg"
+                             style="width:600px;height:600px;"
+                             alt="Bottle cap image stretched to a square 600 by 600 pixel display box"
+                             width="600"
+                             height="800">
+                        <figcaption>
+                            Example A — CSS 600 &times; 600 pixels — width matches source, height compressed, cap appears squashed
+                        </figcaption>
                     </figure>
                     <figure>
-                        <div class="image-placeholder" role="img" aria-label="Personal geometry improper proportions example B placeholder">
-                            Example B — file not yet added
-                        </div>
-                        <figcaption>Example B — [Replace with CSS dimensions and notes]</figcaption>
+                        <img src="images/hand-holding-bottle-cap-600w.jpeg"
+                             style="width:600px;height:400px;"
+                             alt="Bottle cap image stretched to 600 by 400 pixels with a wide, flattened appearance"
+                             width="600"
+                             height="800">
+                        <figcaption>
+                            Example B — CSS 600 &times; 400 pixels — width matches source, image looks flattened vertically
+                        </figcaption>
                     </figure>
                     <figure>
-                        <div class="image-placeholder" role="img" aria-label="Personal geometry improper proportions example C placeholder">
-                            Example C — file not yet added
-                        </div>
-                        <figcaption>Example C — [Replace with CSS dimensions and notes]</figcaption>
+                        <img src="images/hand-holding-bottle-cap-600w.jpeg"
+                             style="width:400px;height:800px;"
+                             alt="Bottle cap image stretched to 400 by 800 pixels with a narrow, elongated appearance"
+                             width="600"
+                             height="800">
+                        <figcaption>
+                            Example C — CSS 400 &times; 800 pixels — height matches source, image looks pinched horizontally
+                        </figcaption>
                     </figure>
                     <figure>
-                        <div class="image-placeholder" role="img" aria-label="Personal geometry improper proportions example D placeholder">
-                            Example D — file not yet added
-                        </div>
-                        <figcaption>Example D — [Replace with CSS dimensions and notes]</figcaption>
+                        <img src="images/hand-holding-bottle-cap-600w.jpeg"
+                             style="width:267px;height:800px;"
+                             alt="Bottle cap image stretched to 267 by 800 pixels with severe horizontal compression"
+                             width="600"
+                             height="800">
+                        <figcaption>
+                            Example D — CSS 267 &times; 800 pixels — height matches source, image looks extremely narrow
+                        </figcaption>
                     </figure>
                 </div>
             </article>
@@ -294,21 +329,31 @@
             <article aria-labelledby="personal-css-enlarge-title">
                 <h4 class="article-title" id="personal-css-enlarge-title">Improper Enlarging with CSS</h4>
                 <p>
-                    These examples will compare a properly resized personal image against a smaller version displayed at
-                    the same CSS width.
+                    Both images below are displayed at the same CSS width of 600 pixels. The properly resized file
+                    already contains 600 pixels of width, so it stays sharp. The 25% version contains only 150
+                    &times; 200 pixels, so forcing it to 600 pixels wide makes the browser invent extra detail and
+                    the round bottle cap becomes blurry and soft.
                 </p>
                 <div class="image-comparison-grid">
                     <figure>
-                        <div class="image-placeholder" role="img" aria-label="Personal geometry properly resized enlargement comparison placeholder">
-                            Properly resized personal image — file not yet added
-                        </div>
-                        <figcaption>Properly resized source — [Replace with source and displayed dimensions]</figcaption>
+                        <img src="images/hand-holding-bottle-cap-600w.jpeg"
+                             style="width:600px;height:auto;"
+                             alt="Properly resized 600 by 800 pixel bottle cap image displayed at 600 pixels wide"
+                             width="600"
+                             height="800">
+                        <figcaption>
+                            Properly resized source — 600 &times; 800 pixels — displayed at 600px wide — sharp detail retained
+                        </figcaption>
                     </figure>
                     <figure>
-                        <div class="image-placeholder" role="img" aria-label="Personal geometry upscaled enlargement comparison placeholder">
-                            25% personal image — file not yet added
-                        </div>
-                        <figcaption>25% source — [Replace with source and displayed dimensions]</figcaption>
+                        <img src="images/hand-holding-bottle-cap-150w.jpeg"
+                             style="width:600px;height:auto;"
+                             alt="150 by 200 pixel bottle cap image enlarged with CSS to 600 pixels wide and appearing blurry"
+                             width="150"
+                             height="200">
+                        <figcaption>
+                            25% source — 150 &times; 200 pixels — displayed at 600px wide — soft and blurry from upscaling
+                        </figcaption>
                     </figure>
                 </div>
             </article>
