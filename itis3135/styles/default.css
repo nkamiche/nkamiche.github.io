@@ -473,18 +473,20 @@ nav a:hover,
 }
 
 .pictures-page .image-comparison-grid {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    overflow: hidden;
+    margin: 16px 0;
+    text-align: center;
 }
 
 .pictures-page .image-comparison-grid figure {
-    float: left;
+    display: inline-block;
     width: 220px;
-    margin-top: 0;
-    margin-right: 16px;
-    margin-bottom: 16px;
-    margin-left: 0;
+    margin: 0 12px 16px;
+    vertical-align: top;
+}
+
+.pictures-page .image-comparison-grid img {
+    display: block;
+    margin: 0 auto;
 }
 
 .pictures-page .submission-notes {
