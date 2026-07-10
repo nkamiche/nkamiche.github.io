@@ -396,3 +396,53 @@ nav a:hover,
     text-align: center;
     margin-top: 24px;
 }
+
+.pexels-distortion-one {
+    width: 600px;
+    height: 600px;
+}
+
+.pexels-distortion-two {
+    width: 600px;
+    height: 400px;
+}
+
+.pexels-distortion-three {
+    width: 400px;
+    height: 900px;
+}
+
+.pexels-distortion-four {
+    width: 267px;
+    height: 900px;
+}
+
+.pexels-enlarged-display {
+    width: 600px;
+    height: auto;
+}
+
+.personal-distortion-one {
+    width: 600px;
+    height: 600px;
+}
+
+.personal-distortion-two {
+    width: 600px;
+    height: 400px;
+}
+
+.personal-distortion-three {
+    width: 400px;
+    height: 800px;
+}
+
+.personal-distortion-four {
+    width: 267px;
+    height: 800px;
+}
+
+.personal-enlarged-display {
+    width: 600px;
+    height: auto;
+}
