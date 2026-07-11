@@ -509,3 +509,25 @@ nav a:hover,
     width: 600px;
     height: auto;
 }
+
+/* Introduction page: large display name beneath the page heading */
+h6.display-name {
+    font-size: 1.6rem;
+    font-family: Georgia, serif;
+    color: #883128;
+    text-align: center;
+    white-space: nowrap;
+    margin: 12px 0 20px;
+}
+
+/* Introduction page: nested course list under the courses detail item */
+.course-list {
+    margin: 0.5rem 0 0 1.25rem;
+    padding-left: 1.25rem;
+}
+
+@media (max-width: 600px) {
+    h6.display-name {
+        font-size: 1.2rem;
+    }
+}
