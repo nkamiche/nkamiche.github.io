@@ -511,7 +511,7 @@ nav a:hover,
 }
 
 /* Introduction page: large display name beneath the page heading */
-main > h6.display-name {
+.display-name {
     font-size: 1.6rem;
     font-family: Georgia, serif;
     color: #883128;
@@ -524,10 +524,4 @@ main > h6.display-name {
 .course-list {
     margin: 0.5rem 0 0 1.25rem;
     padding-left: 1.25rem;
-}
-
-@media (max-width: 600px) {
-    main > h6.display-name {
-        font-size: 1.2rem;
-    }
 }
