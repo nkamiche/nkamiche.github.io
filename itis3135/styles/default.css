@@ -448,6 +448,18 @@ nav a:hover,
     margin-top: 24px;
 }
 
+/* Pictures page: CSS-only downsizing demo for the Pexels kangaroo section */
+.pexels-css-downsize {
+    width: 200px;
+    height: auto;
+}
+
+/* Pictures page: CSS-only downsizing demo for the personal geometry section */
+.personal-css-downsize {
+    width: 200px;
+    height: auto;
+}
+
 .pexels-distortion-one {
     width: 600px;
     height: 600px;
