@@ -261,6 +261,23 @@ nav a:hover,
     background-color: #fff8f9;
 }
 
+.documentation-image {
+    max-width: 320px;
+    margin: 20px auto 28px;
+    text-align: center;
+}
+
+.documentation-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.documentation-image figcaption {
+    margin-top: 8px;
+    font-style: italic;
+}
+
 .doc-layout {
     margin-top: 16px;
     overflow: hidden;
