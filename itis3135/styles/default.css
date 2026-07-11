@@ -365,6 +365,23 @@ nav a:hover,
     font-style: italic;
 }
 
+.website-evaluation-image {
+    max-width: 320px;
+    margin: 20px auto 28px;
+    text-align: center;
+}
+
+.website-evaluation-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.website-evaluation-image figcaption {
+    margin-top: 8px;
+    font-style: italic;
+}
+
 .product-hero {
     text-align: center;
     padding: 8px 0 24px 0;
