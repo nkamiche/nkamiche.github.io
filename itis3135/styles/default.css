@@ -382,6 +382,23 @@ nav a:hover,
     font-style: italic;
 }
 
+.contract-image {
+    max-width: 320px;
+    margin: 20px auto 28px;
+    text-align: center;
+}
+
+.contract-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.contract-image figcaption {
+    margin-top: 8px;
+    font-style: italic;
+}
+
 .product-hero {
     text-align: center;
     padding: 8px 0 24px 0;
