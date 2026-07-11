@@ -511,7 +511,7 @@ nav a:hover,
 }
 
 /* Introduction page: large display name beneath the page heading */
-.display-name {
+main > h6.display-name {
     font-size: 1.6rem;
     font-family: Georgia, serif;
     color: #883128;
@@ -527,7 +527,7 @@ nav a:hover,
 }
 
 @media (max-width: 600px) {
-    .display-name {
+    main > h6.display-name {
         font-size: 1.2rem;
     }
 }
