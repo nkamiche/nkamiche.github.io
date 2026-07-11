@@ -102,12 +102,12 @@
 
     function showError(message) {
         formError.textContent = message;
-        formError.hidden = false;
+        formError.classList.remove("is-hidden");
     }
 
     function hideError() {
         formError.textContent = "";
-        formError.hidden = true;
+        formError.classList.add("is-hidden");
     }
 
     function updateCourseTitles() {

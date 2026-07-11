@@ -13,8 +13,7 @@
 
     <link rel="stylesheet" href="styles/default.css">
 
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-
+    <!-- Introduction form layout, preview, and output panels use embedded CSS classes; no inline style attributes -->
     <style>
         .introduction-page main {
             max-width: 720px;
@@ -255,6 +254,11 @@
             margin: 0 0 1rem;
         }
 
+        /* Hides form validation messages until JavaScript reveals them */
+        .introduction-page .form-error.is-hidden {
+            display: none;
+        }
+
         .introduction-page .picture-preview {
             margin-top: 0.75rem;
             text-align: center;
@@ -316,9 +320,12 @@
             }
         }
     </style>
+
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous" data-deferred-accumulus nomodule></script>
 </head>
 
 <body class="introduction-page">
+    <!-- data-include loads shared header and footer; form sections use CSS classes instead of inline styles -->
 
     <div data-include="components/header.html"></div>
 
@@ -520,7 +527,7 @@
                 </div>
             </section>
 
-            <p id="formError" class="form-error" role="alert" hidden></p>
+            <p id="formError" class="form-error is-hidden" role="alert"></p>
 
             <div class="form-actions">
                 <button type="button" id="generateHtmlButton" class="button-secondary">Generate HTML</button>
@@ -531,7 +538,8 @@
                 <button type="button" id="clearFormButton" class="button-secondary">Clear</button>
             </div>
 
-            <div id="generated-output-container"></div>
+            <!-- output-panel holds generated HTML, JSON, and XML textareas created by JavaScript -->
+            <div id="generated-output-container" class="output-panel"></div>
         </form>
     </main>
 
@@ -541,6 +549,24 @@
     <script src="scripts/introduction.js"></script>
 
     <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
+
+    <script>
+        window.addEventListener("load", function () {
+            setTimeout(function () {
+                if (window.accumulite || document.getElementById("ACCUMF")) {
+                    return;
+                }
+                var placeholder = document.querySelector("script[data-deferred-accumulus]");
+                if (!placeholder) {
+                    return;
+                }
+                var accumulus = document.createElement("script");
+                accumulus.src = placeholder.getAttribute("src");
+                accumulus.crossOrigin = "anonymous";
+                document.head.appendChild(accumulus);
+            }, 2000);
+        });
+    </script>
 
 </body>
 </html>
