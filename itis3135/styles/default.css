@@ -215,6 +215,23 @@ nav a:hover,
     line-height: 1.65;
 }
 
+.inventory-image {
+    max-width: 280px;
+    margin: 20px auto 28px;
+    text-align: center;
+}
+
+.inventory-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.inventory-image figcaption {
+    margin-top: 8px;
+    font-style: italic;
+}
+
 .inventory-table {
     border-collapse: collapse;
     margin-top: 16px;
