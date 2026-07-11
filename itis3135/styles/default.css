@@ -331,6 +331,23 @@ nav a:hover,
     line-height: 1.7;
 }
 
+.product-image {
+    max-width: 320px;
+    margin: 20px auto 28px;
+    text-align: center;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-image figcaption {
+    margin-top: 8px;
+    font-style: italic;
+}
+
 .product-hero {
     text-align: center;
     padding: 8px 0 24px 0;
