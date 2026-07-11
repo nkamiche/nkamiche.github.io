@@ -138,16 +138,19 @@ header p {
 }
 
 .interests-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    gap: 24px;
+    text-align: center;
+    font-size: 0;
 }
 
 .interest-card {
     box-sizing: border-box;
-    width: 31%;
+    display: inline-block;
+    width: 30%;
+    min-height: 210px;
+    margin: 12px;
+    vertical-align: top;
+    text-align: left;
+    font-size: 16px;
     background-color: #f9eced;
     border-radius: 12px;
     box-shadow: 0 2px 8px #cccccc;
@@ -217,7 +220,7 @@ footer a:hover {
 
 @media (max-width: 900px) {
     .interest-card {
-        width: 47%;
+        width: 44%;
     }
 }
 
@@ -240,7 +243,8 @@ footer a:hover {
     }
 
     .interest-card {
-        width: 100%;
+        width: 90%;
+        margin: 12px auto;
     }
 
     .interest-card-title {
