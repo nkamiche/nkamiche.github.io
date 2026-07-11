@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="../styles/default.css">
 
+  <!-- Embedded hobby-site styles: layout, SPA sections, figures, and baking theme -->
   <style>
     body {
       margin: 0;
@@ -16,6 +17,7 @@
       color: #3d1f12;
     }
 
+    /* Course include wrappers inherit serif typography from the main course site */
     .course-header header,
     .course-footer footer {
       font-family: Georgia, "Times New Roman", serif;
@@ -29,7 +31,7 @@
       padding: 20px;
     }
 
-    .hobby-site-header h1,
+    .hobby-site-header h2,
     .hobby-site-footer h2 {
       font-family: Georgia, serif;
     }
@@ -60,6 +62,7 @@
       font-family: Georgia, serif;
     }
 
+    /* Hides inactive hobby sections until selected through navigation */
     section {
       display: none;
       background-color: #ffd8be;
@@ -68,6 +71,7 @@
       box-shadow: 0 4px 12px rgba(61, 31, 18, 0.2);
     }
 
+    /* Shows the currently selected SPA section */
     section.active {
       display: block;
     }
@@ -92,11 +96,6 @@
       margin-top: 8px;
     }
 
-    .prompt-note {
-      font-style: italic;
-      font-size: 0.95em;
-    }
-
     table {
       width: 100%;
       border-collapse: collapse;
@@ -119,21 +118,27 @@
       line-height: 1.7;
     }
 
+    /* Decorative divider between hobby navigation and footer links */
     .divider {
       color: #b85c38;
       font-size: 1.2em;
       margin: 0 6px;
     }
   </style>
+
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+  <!-- Course site header loaded from shared include -->
   <div class="course-header" data-include="../components/header.html"></div>
 
+  <!-- Hobby mini-site header with SPA section navigation -->
   <header class="hobby-site-header">
-    <h1>Baking Bliss</h1>
+    <h2>Baking Bliss</h2>
 
-    <nav>
+    <!-- Hobby navigation used to switch between SPA sections -->
+    <nav class="hobby-nav">
       <a href="#" onclick="showSection('what')">What</a>
       <span class="divider">✦</span>
       <a href="#" onclick="showSection('who')">Who</a>
@@ -150,8 +155,10 @@
     </nav>
   </header>
 
-  <main>
-    <section id="what" class="active">
+  <!-- Main SPA content container for hobby sections -->
+  <main id="hobby-content">
+    <!-- What section: baking overview, shown by default -->
+    <section id="what" class="hobby-section active">
       <h2>What: Welcome to Baking</h2>
       <p>Baking is the hobby of creating sweet and savory foods using ingredients like flour, sugar, eggs, butter, and spices.</p>
       <p>I enjoy baking because it combines creativity, patience, and comfort food all in one activity.</p>
@@ -161,14 +168,19 @@
         <li>Cakes</li>
       </ul>
 
-      <figure>
+      <!-- Figure containing an AI-generated baking image and prompt note -->
+      <figure class="hobby-figure">
         <img src="images/baking-home.jpg" alt="Fresh baked cupcakes on a kitchen counter">
-        <figcaption>Fresh Cupcakes</figcaption>
-        <p class="prompt-note">AI prompt used: “Create a warm photorealistic image of fresh cupcakes on a cozy kitchen counter.”</p>
+        <figcaption>
+          Fresh Cupcakes
+          <br>
+          <em>AI prompt: "Create a warm photorealistic image of fresh cupcakes on a cozy kitchen counter."</em>
+        </figcaption>
       </figure>
     </section>
 
-    <section id="who">
+    <!-- Who section: personal baking background -->
+    <section id="who" class="hobby-section">
       <h2>Who: About Me</h2>
       <p>I am someone who enjoys relaxing hobbies that still feel productive and creative.</p>
       <p>Baking gives me a way to make something beautiful while also sharing it with others.</p>
@@ -178,14 +190,19 @@
         <li>Favorite part: decorating</li>
       </ul>
 
-      <figure>
+      <!-- Figure containing an AI-generated decorating image and prompt note -->
+      <figure class="hobby-figure">
         <img src="images/baking-about.jpg" alt="A person decorating cupcakes with frosting">
-        <figcaption>Decorating Desserts</figcaption>
-        <p class="prompt-note">AI prompt used: “Create a photorealistic image of someone decorating cupcakes with pastel frosting.”</p>
+        <figcaption>
+          Decorating Desserts
+          <br>
+          <em>AI prompt: "Create a photorealistic image of someone decorating cupcakes with pastel frosting."</em>
+        </figcaption>
       </figure>
     </section>
 
-    <section id="when">
+    <!-- When section: best times to bake -->
+    <section id="when" class="hobby-section">
       <h2>When: Best Times to Bake</h2>
       <p>Baking is perfect for weekends, holidays, birthdays, or any time I want to make something comforting.</p>
       <p>I usually prefer baking in the evening because it feels calm and peaceful.</p>
@@ -209,14 +226,19 @@
         </tr>
       </table>
 
-      <figure>
+      <!-- Figure containing an AI-generated oven baking image and prompt note -->
+      <figure class="hobby-figure">
         <img src="images/baking-when.jpg" alt="Cookies baking in an oven">
-        <figcaption>Evening Baking</figcaption>
-        <p class="prompt-note">AI prompt used: “Create a photorealistic image of cookies baking in a warm glowing oven.”</p>
+        <figcaption>
+          Evening Baking
+          <br>
+          <em>AI prompt: "Create a photorealistic image of cookies baking in a warm glowing oven."</em>
+        </figcaption>
       </figure>
     </section>
 
-    <section id="where">
+    <!-- Where section: best places to bake -->
+    <section id="where" class="hobby-section">
       <h2>Where: Best Places to Bake</h2>
       <p>The best place to bake is a clean kitchen with enough counter space.</p>
       <p>Baking can also happen in a dorm kitchen, family kitchen, or small apartment kitchen.</p>
@@ -226,14 +248,19 @@
         <li>Friend’s kitchen</li>
       </ol>
 
-      <figure>
+      <!-- Figure containing an AI-generated kitchen image and prompt note -->
+      <figure class="hobby-figure">
         <img src="images/baking-where.jpg" alt="A cozy kitchen prepared for baking">
-        <figcaption>Cozy Baking Space</figcaption>
-        <p class="prompt-note">AI prompt used: “Create a photorealistic image of a cozy kitchen with baking tools and ingredients.”</p>
+        <figcaption>
+          Cozy Baking Space
+          <br>
+          <em>AI prompt: "Create a photorealistic image of a cozy kitchen with baking tools and ingredients."</em>
+        </figcaption>
       </figure>
     </section>
 
-    <section id="how">
+    <!-- How section: baking process steps -->
+    <section id="how" class="hobby-section">
       <h2>How: How Baking Works</h2>
       <p>Baking starts with choosing a recipe and gathering ingredients.</p>
       <p>Then, the ingredients are measured, mixed, baked, cooled, and decorated.</p>
@@ -243,44 +270,59 @@
         <li>Let baked goods cool before decorating.</li>
       </ul>
 
-      <figure>
+      <!-- Figure containing an AI-generated ingredients image and prompt note -->
+      <figure class="hobby-figure">
         <img src="images/baking-how.jpg" alt="Baking ingredients measured in bowls">
-        <figcaption>Preparing Ingredients</figcaption>
-        <p class="prompt-note">AI prompt used: “Create a photorealistic image of baking ingredients measured in bowls on a counter.”</p>
+        <figcaption>
+          Preparing Ingredients
+          <br>
+          <em>AI prompt: "Create a photorealistic image of baking ingredients measured in bowls on a counter."</em>
+        </figcaption>
       </figure>
     </section>
 
-    <section id="why">
+    <!-- Why section: reasons for enjoying baking -->
+    <section id="why" class="hobby-section">
       <h2>Why: Why I Like Baking</h2>
       <p>Baking is fun because it turns simple ingredients into something special.</p>
       <p>It also helps me relax and focus on one step at a time.</p>
       <p>The best part is sharing the final result with friends or family.</p>
 
-      <figure>
+      <!-- Figure containing an AI-generated sharing image and prompt note -->
+      <figure class="hobby-figure">
         <img src="images/baking-why.jpg" alt="A plate of decorated cupcakes ready to share">
-        <figcaption>Sharing Sweet Treats</figcaption>
-        <p class="prompt-note">AI prompt used: “Create a photorealistic image of decorated cupcakes on a plate ready to share.”</p>
+        <figcaption>
+          Sharing Sweet Treats
+          <br>
+          <em>AI prompt: "Create a photorealistic image of decorated cupcakes on a plate ready to share."</em>
+        </figcaption>
       </figure>
     </section>
 
-    <section id="ai">
+    <!-- AI Prompts section: documents prompts used for site content and images -->
+    <section id="ai" class="hobby-section">
       <h2>AI Prompts</h2>
       <p>I used AI to help create the structure, wording, and image prompt ideas for this hobby website.</p>
       <p>Prompts used:</p>
       <ul>
-        <li>“Create a one-page hobby website using HTML, CSS, and JavaScript.”</li>
-        <li>“Write short section content for a baking hobby website.”</li>
-        <li>“Give me photorealistic image prompts for a baking website.”</li>
+        <li>"Create a one-page hobby website using HTML, CSS, and JavaScript."</li>
+        <li>"Write short section content for a baking hobby website."</li>
+        <li>"Give me photorealistic image prompts for a baking website."</li>
       </ul>
 
-      <figure>
+      <!-- Figure containing an AI-generated planning image and prompt note -->
+      <figure class="hobby-figure">
         <img src="images/baking-ai.jpg" alt="Laptop beside baking ingredients">
-        <figcaption>AI and Baking Planning</figcaption>
-        <p class="prompt-note">AI prompt used: “Create a photorealistic image of a laptop next to baking ingredients on a kitchen counter.”</p>
+        <figcaption>
+          AI and Baking Planning
+          <br>
+          <em>AI prompt: "Create a photorealistic image of a laptop next to baking ingredients on a kitchen counter."</em>
+        </figcaption>
       </figure>
     </section>
   </main>
 
+  <!-- Hobby mini-site footer with validation and design-firm links -->
   <footer class="hobby-site-footer">
     <p>
       <a href="https://validator.w3.org/">HTML Validation</a>
@@ -297,9 +339,11 @@
     </p>
   </footer>
 
+  <!-- Course site footer loaded from shared include -->
   <div class="course-footer" data-include="../components/footer.html"></div>
 
   <script src="../scripts/htmlinclude.js"></script>
+  <!-- SPA section switching and dynamic page title updates -->
   <script>
     function showSection(sectionId) {
       const sections = document.querySelectorAll("main section");
@@ -308,8 +352,28 @@
         section.classList.remove("active");
       });
 
-      document.getElementById(sectionId).classList.add("active");
+      const activeSection = document.getElementById(sectionId);
+      activeSection.classList.add("active");
+
+      const sectionHeading = activeSection.querySelector("h2");
+      if (sectionHeading) {
+        document.title =
+          "Neha Kamichetty's Nice Kangaroo | ITIS3135 | Hobby | " +
+          sectionHeading.textContent.trim();
+      }
     }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const activeSection = document.querySelector("main section.active");
+      if (activeSection) {
+        const sectionHeading = activeSection.querySelector("h2");
+        if (sectionHeading) {
+          document.title =
+            "Neha Kamichetty's Nice Kangaroo | ITIS3135 | Hobby | " +
+            sectionHeading.textContent.trim();
+        }
+      }
+    });
   </script>
 
   <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
