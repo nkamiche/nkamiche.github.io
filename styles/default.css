@@ -63,10 +63,6 @@ header p {
     display: none;
 }
 
-.host-clt .course-link {
-    display: none;
-}
-
 .hero {
     text-align: center;
     padding: 32px 0 24px;
@@ -122,36 +118,21 @@ header p {
 
 .interests {
     margin-bottom: 32px;
-}
-
-.interests-grid {
-    overflow: hidden;
+    text-align: center;
 }
 
 .interest-card {
-    float: left;
-    width: 31%;
-    margin-right: 3.5%;
-    margin-bottom: 24px;
     box-sizing: border-box;
-    min-height: 180px;
+    display: inline-block;
+    width: 30%;
+    min-height: 210px;
+    margin: 12px;
+    vertical-align: top;
+    text-align: left;
+    font-size: 16px;
     background-color: #f9eced;
     border-radius: 12px;
     box-shadow: 0 2px 8px #cccccc;
-}
-
-.interest-card:nth-child(3) {
-    margin-right: 0;
-}
-
-.interest-card:nth-child(4) {
-    clear: left;
-    margin-left: 17.25%;
-    margin-right: 3.5%;
-}
-
-.interest-card:nth-child(5) {
-    margin-right: 0;
 }
 
 .interest-card-title {
@@ -177,6 +158,7 @@ header p {
     display: table;
     margin: 0 auto;
     background-color: #883128;
+    /* White text provides clear contrast against the dark red button background. */
     color: white;
     padding: 12px 24px;
     border-radius: 8px;
@@ -218,28 +200,7 @@ footer a:hover {
 
 @media (max-width: 900px) {
     .interest-card {
-        width: 48%;
-        margin-left: 0;
-        margin-right: 4%;
-        min-height: 160px;
-    }
-
-    .interest-card:nth-child(even) {
-        margin-right: 0;
-    }
-
-    .interest-card:nth-child(3) {
-        margin-right: 4%;
-    }
-
-    .interest-card:nth-child(4) {
-        clear: left;
-        margin-left: 0;
-        margin-right: 4%;
-    }
-
-    .interest-card:nth-child(5) {
-        margin-right: 0;
+        width: 44%;
     }
 }
 
@@ -262,15 +223,8 @@ footer a:hover {
     }
 
     .interest-card {
-        float: none;
-        width: 100%;
-        margin-right: 0;
-        margin-left: 0;
-        min-height: 0;
-    }
-
-    .interest-card:nth-child(4) {
-        margin-left: 0;
+        width: 90%;
+        margin: 12px auto;
     }
 
     .interest-card-title {

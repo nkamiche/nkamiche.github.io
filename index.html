@@ -5,15 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neha Kamichetty | Home</title>
   <link rel="icon" href="images/favicon.ico">
-  <script>
-    (function () {
-      var isGitHub = location.hostname.indexOf('github.io') !== -1;
-      document.documentElement.className = isGitHub ? 'host-github' : 'host-clt';
-      if (isGitHub) {
-        document.write('<link rel="stylesheet" href="styles/default.css">');
-      }
-    })();
-  </script>
   <style id="personal-embedded-css">
 body {
     background-color: #e9b3b7;
@@ -175,7 +166,7 @@ header p {
     display: table;
     margin: 0 auto;
     background-color: #883128;
-    /* White text is used for strong contrast against the dark red button background. */
+    /* White text provides clear contrast against the dark red button background. */
     color: white;
     padding: 12px 24px;
     border-radius: 8px;
@@ -253,21 +244,6 @@ footer a:hover {
     }
 }
   </style>
-  <script>
-    (function () {
-      if (document.documentElement.className === 'host-github') {
-        var embedded = document.getElementById('personal-embedded-css');
-        if (embedded) {
-          embedded.parentNode.removeChild(embedded);
-        }
-      } else {
-        var external = document.querySelector('link[href="styles/default.css"]');
-        if (external) {
-          external.parentNode.removeChild(external);
-        }
-      }
-    })();
-  </script>
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -275,11 +251,7 @@ footer a:hover {
     <h1>Neha Kamichetty</h1>
     <p><em>UNC Charlotte Computer Science student passionate about technology and creativity.</em></p>
 
-    <nav class="github-only" aria-label="Site navigation">
-      <a href="./">Home</a>
-    </nav>
-
-    <nav class="clt-only" aria-label="Site navigation">
+    <nav aria-label="Site navigation">
       <a href="#about">About</a> |
       <a href="#interests">Interests</a>
     </nav>
@@ -348,8 +320,7 @@ footer a:hover {
     </section>
 
     <section class="course-link" aria-label="Course site link">
-      <a class="button clt-only" href="itis3135/">Go to my ITIS 3135 Course Site</a>
-      <a class="button github-only" href="https://webpages.charlotte.edu/nkamiche/itis3135/">Go to my ITIS 3135 Course Site</a>
+      <a class="button" href="itis3135/">Go to my ITIS 3135 Course Site</a>
     </section>
   </main>
 
