@@ -80,10 +80,6 @@ header p {
     display: none;
 }
 
-.host-clt .course-link {
-    display: none;
-}
-
 .hero {
     text-align: center;
     padding: 32px 0 24px;
@@ -121,13 +117,13 @@ header p {
     margin: 16px auto 0;
     text-align: center;
     max-width: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px #cccccc;
 }
 
 .about-photo img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px #cccccc;
+    width: 100%;
 }
 
 .about-photo figcaption {
@@ -142,33 +138,19 @@ header p {
 }
 
 .interests-grid {
-    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 24px;
 }
 
 .interest-card {
-    float: left;
-    width: 31%;
-    margin-right: 3.5%;
-    margin-bottom: 24px;
     box-sizing: border-box;
-    min-height: 180px;
+    width: 31%;
     background-color: #f9eced;
     border-radius: 12px;
     box-shadow: 0 2px 8px #cccccc;
-}
-
-.interest-card:nth-child(3) {
-    margin-right: 0;
-}
-
-.interest-card:nth-child(4) {
-    clear: left;
-    margin-left: 17.25%;
-    margin-right: 3.5%;
-}
-
-.interest-card:nth-child(5) {
-    margin-right: 0;
 }
 
 .interest-card-title {
@@ -235,28 +217,7 @@ footer a:hover {
 
 @media (max-width: 900px) {
     .interest-card {
-        width: 48%;
-        margin-left: 0;
-        margin-right: 4%;
-        min-height: 160px;
-    }
-
-    .interest-card:nth-child(even) {
-        margin-right: 0;
-    }
-
-    .interest-card:nth-child(3) {
-        margin-right: 4%;
-    }
-
-    .interest-card:nth-child(4) {
-        clear: left;
-        margin-left: 0;
-        margin-right: 4%;
-    }
-
-    .interest-card:nth-child(5) {
-        margin-right: 0;
+        width: 47%;
     }
 }
 
@@ -279,15 +240,7 @@ footer a:hover {
     }
 
     .interest-card {
-        float: none;
         width: 100%;
-        margin-right: 0;
-        margin-left: 0;
-        min-height: 0;
-    }
-
-    .interest-card:nth-child(4) {
-        margin-left: 0;
     }
 
     .interest-card-title {
@@ -327,8 +280,7 @@ footer a:hover {
 
     <nav class="clt-only" aria-label="Site navigation">
       <a href="#about">About</a> |
-      <a href="#interests">Interests</a> |
-      <a href="itis3135/">ITIS 3135</a>
+      <a href="#interests">Interests</a>
     </nav>
   </header>
 
@@ -394,8 +346,9 @@ footer a:hover {
       </div>
     </section>
 
-    <section class="course-link github-only" aria-label="Course site link">
-      <a class="button" href="https://webpages.charlotte.edu/nkamiche/itis3135/">Go to my ITIS 3135 Course Site</a>
+    <section class="course-link" aria-label="Course site link">
+      <a class="button clt-only" href="itis3135/">Go to my ITIS 3135 Course Site</a>
+      <a class="button github-only" href="https://webpages.charlotte.edu/nkamiche/itis3135/">Go to my ITIS 3135 Course Site</a>
     </section>
   </main>
 
