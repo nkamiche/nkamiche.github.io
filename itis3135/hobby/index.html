@@ -31,8 +31,7 @@
       padding: 20px;
     }
 
-    .hobby-site-header h2,
-    .hobby-site-footer h2 {
+    .hobby-heading {
       font-family: Georgia, serif;
     }
 
@@ -58,10 +57,6 @@
       padding: 20px;
     }
 
-    main h2 {
-      font-family: Georgia, serif;
-    }
-
     /* Hides inactive hobby sections until selected through navigation */
     section {
       display: none;
@@ -72,7 +67,7 @@
     }
 
     /* Shows the currently selected SPA section */
-    section.active {
+    .active {
       display: block;
     }
 
@@ -135,7 +130,7 @@
 
   <!-- Hobby mini-site header with SPA section navigation -->
   <header class="hobby-site-header">
-    <h2>Baking Bliss</h2>
+    <h2 class="hobby-heading">Baking Bliss</h2>
 
     <!-- Hobby navigation used to switch between SPA sections -->
     <nav class="hobby-nav">
@@ -159,7 +154,7 @@
   <main id="hobby-content">
     <!-- What section: baking overview, shown by default -->
     <section id="what" class="hobby-section active">
-      <h2>What: Welcome to Baking</h2>
+      <h2 class="hobby-heading">What: Welcome to Baking</h2>
       <p>Baking is the hobby of creating sweet and savory foods using ingredients like flour, sugar, eggs, butter, and spices.</p>
       <p>I enjoy baking because it combines creativity, patience, and comfort food all in one activity.</p>
       <ul>
@@ -181,7 +176,7 @@
 
     <!-- Who section: personal baking background -->
     <section id="who" class="hobby-section">
-      <h2>Who: About Me</h2>
+      <h2 class="hobby-heading">Who: About Me</h2>
       <p>I am someone who enjoys relaxing hobbies that still feel productive and creative.</p>
       <p>Baking gives me a way to make something beautiful while also sharing it with others.</p>
       <ul>
@@ -203,7 +198,7 @@
 
     <!-- When section: best times to bake -->
     <section id="when" class="hobby-section">
-      <h2>When: Best Times to Bake</h2>
+      <h2 class="hobby-heading">When: Best Times to Bake</h2>
       <p>Baking is perfect for weekends, holidays, birthdays, or any time I want to make something comforting.</p>
       <p>I usually prefer baking in the evening because it feels calm and peaceful.</p>
 
@@ -239,7 +234,7 @@
 
     <!-- Where section: best places to bake -->
     <section id="where" class="hobby-section">
-      <h2>Where: Best Places to Bake</h2>
+      <h2 class="hobby-heading">Where: Best Places to Bake</h2>
       <p>The best place to bake is a clean kitchen with enough counter space.</p>
       <p>Baking can also happen in a dorm kitchen, family kitchen, or small apartment kitchen.</p>
       <ol>
@@ -261,7 +256,7 @@
 
     <!-- How section: baking process steps -->
     <section id="how" class="hobby-section">
-      <h2>How: How Baking Works</h2>
+      <h2 class="hobby-heading">How: How Baking Works</h2>
       <p>Baking starts with choosing a recipe and gathering ingredients.</p>
       <p>Then, the ingredients are measured, mixed, baked, cooled, and decorated.</p>
       <ul>
@@ -283,7 +278,7 @@
 
     <!-- Why section: reasons for enjoying baking -->
     <section id="why" class="hobby-section">
-      <h2>Why: Why I Like Baking</h2>
+      <h2 class="hobby-heading">Why: Why I Like Baking</h2>
       <p>Baking is fun because it turns simple ingredients into something special.</p>
       <p>It also helps me relax and focus on one step at a time.</p>
       <p>The best part is sharing the final result with friends or family.</p>
@@ -301,7 +296,7 @@
 
     <!-- AI Prompts section: documents prompts used for site content and images -->
     <section id="ai" class="hobby-section">
-      <h2>AI Prompts</h2>
+      <h2 class="hobby-heading">AI Prompts</h2>
       <p>I used AI to help create the structure, wording, and image prompt ideas for this hobby website.</p>
       <p>Prompts used:</p>
       <ul>
