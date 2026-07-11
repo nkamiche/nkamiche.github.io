@@ -5,22 +5,301 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neha Kamichetty | Home</title>
   <link rel="icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="styles/default.css">
+  <script>
+    (function () {
+      var isGitHub = location.hostname.indexOf('github.io') !== -1;
+      document.documentElement.className = isGitHub ? 'host-github' : 'host-clt';
+      if (isGitHub) {
+        document.write('<link rel="stylesheet" href="styles/default.css">');
+      }
+    })();
+  </script>
+  <style id="personal-embedded-css">
+body {
+    background-color: #e9b3b7;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #3a1f1b;
+}
 
+header {
+    max-width: 960px;
+    margin: 30px auto 0;
+    background-color: #f9eced;
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+h1 {
+    color: #883128;
+    font-family: Georgia, serif;
+    margin: 0 0 12px;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto 25px;
+    padding: 0 20px 25px;
+    overflow-x: hidden;
+}
+
+h2 {
+    color: #883128;
+    font-family: Georgia, serif;
+    border-bottom: 2px solid #cc8b84;
+    padding-bottom: 8px;
+    display: table;
+}
+
+nav a {
+    color: #883128;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+header p {
+    margin: 0 0 12px;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.clt-only {
+    display: none;
+}
+
+.host-clt .clt-only {
+    display: block;
+}
+
+.host-clt .github-only {
+    display: none;
+}
+
+.host-clt .course-link {
+    display: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 32px 0 24px;
+}
+
+.hero-title {
+    font-size: 32px;
+    display: block;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin: 0 0 12px;
+}
+
+.hero-tagline {
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.about-card {
+    background-color: #f9eced;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #cccccc;
+    margin-bottom: 28px;
+}
+
+.about-card p {
+    line-height: 1.7;
+    margin: 16px 0 0;
+}
+
+.about-photo {
+    margin: 16px auto 0;
+    text-align: center;
+    max-width: 280px;
+}
+
+.about-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #cccccc;
+}
+
+.about-photo figcaption {
+    margin-top: 8px;
+    font-size: 15px;
+    font-style: italic;
+    color: #6d4a44;
+}
+
+.interests {
+    margin-bottom: 32px;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+.interest-card {
+    grid-column: span 2;
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #f9eced;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #cccccc;
+}
+
+.interest-card:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.interest-card:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+.interest-card-title {
+    color: #883128;
+    font-family: Georgia, serif;
+    margin: 0 0 12px;
+    font-size: 18px;
+    padding: 24px 24px 0 24px;
+}
+
+.interest-card p {
+    margin: 0;
+    line-height: 1.65;
+    padding: 0 24px 24px 24px;
+}
+
+.course-link {
+    text-align: center;
+    padding: 8px 0 16px;
+}
+
+.button {
+    display: table;
+    margin: 0 auto;
+    background-color: #883128;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #6d251e;
+}
+
+footer {
+    color: #883128;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #883128;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width: 900px) {
+    .interests-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .interest-card,
+    .interest-card:nth-child(4),
+    .interest-card:nth-child(5) {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        margin-top: 20px;
+        padding: 24px 18px;
+    }
+
+    main {
+        padding: 0 16px 20px;
+    }
+
+    .hero-title {
+        font-size: 26px;
+    }
+
+    .about-card {
+        padding: 20px;
+    }
+
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .interest-card-title {
+        padding: 20px 20px 0 20px;
+    }
+
+    .interest-card p {
+        padding: 0 20px 20px 20px;
+    }
+}
+  </style>
+  <script>
+    (function () {
+      if (document.documentElement.className === 'host-github') {
+        var embedded = document.getElementById('personal-embedded-css');
+        if (embedded) {
+          embedded.parentNode.removeChild(embedded);
+        }
+      } else {
+        var external = document.querySelector('link[href="styles/default.css"]');
+        if (external) {
+          external.parentNode.removeChild(external);
+        }
+      }
+    })();
+  </script>
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!--
-    Layout: hero, about-card, and interests sections organize the page.
-    card-grid and interest-card style the interest cards; hero-title and
-    about-title are heading helpers; visually-hidden hides the interests h2.
-  -->
   <header>
     <h1>Neha Kamichetty</h1>
     <p><em>UNC Charlotte Computer Science student passionate about technology and creativity.</em></p>
 
-    <nav>
+    <nav class="github-only" aria-label="Site navigation">
       <a href="./">Home</a>
+    </nav>
+
+    <nav class="clt-only" aria-label="Site navigation">
+      <a href="#about">About</a> |
+      <a href="#interests">Interests</a> |
+      <a href="itis3135/">ITIS 3135</a>
     </nav>
   </header>
 
@@ -32,7 +311,7 @@
       </p>
     </section>
 
-    <section class="about-card" aria-labelledby="about-title">
+    <section class="about-card" id="about" aria-labelledby="about-title">
       <h2 id="about-title" class="about-title">About Me</h2>
 
       <figure class="about-photo">
@@ -49,10 +328,10 @@
       </p>
     </section>
 
-    <section class="interests" aria-labelledby="interests-title">
+    <section class="interests" id="interests" aria-labelledby="interests-title">
       <h2 id="interests-title" class="visually-hidden">My Interests</h2>
 
-      <div class="card-grid">
+      <div class="interests-grid">
         <article class="interest-card">
           <h3 class="interest-card-title">🎨 Art</h3>
           <p>I enjoy drawing, digital art, and creative design.</p>
@@ -86,7 +365,7 @@
       </div>
     </section>
 
-    <section class="course-link" aria-label="Course site link">
+    <section class="course-link github-only" aria-label="Course site link">
       <a class="button" href="https://webpages.charlotte.edu/nkamiche/itis3135/">Go to my ITIS 3135 Course Site</a>
     </section>
   </main>

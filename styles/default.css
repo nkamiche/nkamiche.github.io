@@ -24,6 +24,7 @@ main {
     max-width: 960px;
     margin: 0 auto 25px;
     padding: 0 20px 25px;
+    overflow-x: hidden;
 }
 
 h2 {
@@ -48,6 +49,22 @@ header p {
     margin: 0 0 12px;
     font-size: 17px;
     line-height: 1.6;
+}
+
+.clt-only {
+    display: none;
+}
+
+.host-clt .clt-only {
+    display: block;
+}
+
+.host-clt .github-only {
+    display: none;
+}
+
+.host-clt .course-link {
+    display: none;
 }
 
 .hero {
@@ -98,7 +115,7 @@ header p {
 
 .about-photo figcaption {
     margin-top: 8px;
-    font-size: 0.95rem;
+    font-size: 15px;
     font-style: italic;
     color: #6d4a44;
 }
@@ -107,14 +124,28 @@ header p {
     margin-bottom: 32px;
 }
 
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
 .interest-card {
-    float: left;
-    width: 240px;
-    max-width: 100%;
-    margin: 0 16px 20px 0;
+    grid-column: span 2;
+    box-sizing: border-box;
+    height: 100%;
     background-color: #f9eced;
     border-radius: 12px;
     box-shadow: 0 2px 8px #cccccc;
+}
+
+.interest-card:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.interest-card:nth-child(5) {
+    grid-column: 4 / span 2;
 }
 
 .interest-card-title {
@@ -134,14 +165,12 @@ header p {
 .course-link {
     text-align: center;
     padding: 8px 0 16px;
-    clear: both;
 }
 
 .button {
     display: table;
     margin: 0 auto;
     background-color: #883128;
-    /* white label text for contrast on the burgundy button */
     color: white;
     padding: 12px 24px;
     border-radius: 8px;
@@ -181,6 +210,18 @@ footer a:hover {
     border: 0;
 }
 
+@media (max-width: 900px) {
+    .interests-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .interest-card,
+    .interest-card:nth-child(4),
+    .interest-card:nth-child(5) {
+        grid-column: auto;
+    }
+}
+
 @media (max-width: 600px) {
     header {
         margin-top: 20px;
@@ -197,6 +238,10 @@ footer a:hover {
 
     .about-card {
         padding: 20px;
+    }
+
+    .interests-grid {
+        grid-template-columns: 1fr;
     }
 
     .interest-card-title {
