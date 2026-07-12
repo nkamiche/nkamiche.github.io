@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neha Kamichetty | Home</title>
   <link rel="icon" href="images/favicon.ico">
-  <style id="personal-embedded-css">
+  <style>
 body {
     background-color: #e8edf5;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -96,7 +96,8 @@ main > section figure {
 }
 
 main > section figure img {
-    max-width: 100%;
+    max-width: 280px;
+    width: 100%;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(26, 35, 50, 0.12);
@@ -201,7 +202,6 @@ footer a:hover {
     }
 }
   </style>
-  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous" data-deferred-accumulus nomodule></script>
 </head>
 <body>
   <header>
@@ -217,8 +217,7 @@ footer a:hover {
 
       <figure>
         <img src="images/neha-introduction.jpg"
-             alt="Neha Kamichetty at graduation wearing a cap and gown."
-             width="280">
+             alt="Neha Kamichetty at graduation wearing a cap and gown.">
         <figcaption>Neha at graduation.</figcaption>
       </figure>
 
@@ -280,19 +279,35 @@ footer a:hover {
 
   <script>
     window.addEventListener("load", function () {
-      setTimeout(function () {
+      function loadAccumulus() {
         if (window.accumulite || document.getElementById("ACCUMF")) {
           return;
         }
-        var placeholder = document.querySelector("script[data-deferred-accumulus]");
-        if (!placeholder) {
-          return;
-        }
         var accumulus = document.createElement("script");
-        accumulus.src = placeholder.getAttribute("src");
+        accumulus.src = "https://lint.page/kit/4d0fe3.js";
         accumulus.crossOrigin = "anonymous";
         document.head.appendChild(accumulus);
-      }, 2000);
+      }
+
+      function waitForVicunadatorThenLoad() {
+        if (document.getElementById("standards-check-badge")) {
+          setTimeout(loadAccumulus, 300);
+          return;
+        }
+        var observer = new MutationObserver(function () {
+          if (document.getElementById("standards-check-badge")) {
+            observer.disconnect();
+            setTimeout(loadAccumulus, 300);
+          }
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+        setTimeout(function () {
+          observer.disconnect();
+          loadAccumulus();
+        }, 15000);
+      }
+
+      setTimeout(waitForVicunadatorThenLoad, 500);
     });
   </script>
 </body>
