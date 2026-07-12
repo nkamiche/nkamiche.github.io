@@ -7,16 +7,6 @@
 
     <title>Neha Kamichetty's Nice Kangaroo | ITIS3135 | Home</title>
 
-    <script>
-        (function () {
-            var cltCourseHome = "https://webpages.charlotte.edu/nkamiche/itis3135/";
-
-            if (location.hostname.indexOf("github.io") !== -1) {
-                document.write('<meta http-equiv="refresh" content="0; url=' + cltCourseHome + '">');
-            }
-        })();
-    </script>
-
     <link rel="stylesheet" href="styles/default.css">
 
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
@@ -24,61 +14,37 @@
 
 <body>
 
-    <div id="github-redirect">
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>About Me</h2>
+
+        <figure>
+            <img src="images/neha-introduction.jpg"
+                 alt="Neha Kamichetty smiling in a restaurant mirror while holding a phone."
+                 width="280">
+            <figcaption>Neha Kamichetty — course homepage photo</figcaption>
+        </figure>
+
         <p>
-            Redirecting to the UNC Charlotte course site...
-            <a href="https://webpages.charlotte.edu/nkamiche/itis3135/">Click here if you are not redirected.</a>
+            My name is Neha Kamichetty. I am currently an upcoming senior at UNC Charlotte studying Computer Science.
+            I enjoy swimming, art, cybersecurity, software development, and learning new technologies.
         </p>
-    </div>
 
-    <div id="course-home" class="is-hidden">
-        <div data-include="components/header.html"></div>
+        <p>
+            Welcome to my ITIS 3135 course website. Use the navigation links above to explore my coursework and assignments.
+        </p>
 
-        <main>
-            <h2>About Me</h2>
+        <p>
+            <a href="introduction.html">Go to my Introduction Page</a>
+        </p>
+    </main>
 
-            <figure>
-                <img src="images/neha-introduction.jpg"
-                     alt="Neha Kamichetty smiling in a restaurant mirror while holding a phone."
-                     width="280">
-                <figcaption>Neha Kamichetty — course homepage photo</figcaption>
-            </figure>
+    <div data-include="components/footer.html"></div>
 
-            <p>
-                My name is Neha Kamichetty. I am currently an upcoming senior at UNC Charlotte studying Computer Science.
-                I enjoy swimming, art, cybersecurity, software development, and learning new technologies.
-            </p>
+    <script src="scripts/htmlinclude.js"></script>
 
-            <p>
-                Welcome to my ITIS 3135 course website. Use the navigation links above to explore my coursework and assignments.
-            </p>
-
-            <p>
-                <a href="introduction.html">Go to my Introduction Page</a>
-            </p>
-        </main>
-
-        <div data-include="components/footer.html"></div>
-
-        <script src="scripts/htmlinclude.js"></script>
-
-        <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
-    </div>
-
-    <script>
-        (function () {
-            var cltCourseHome = "https://webpages.charlotte.edu/nkamiche/itis3135/";
-            var redirectBlock = document.getElementById("github-redirect");
-            var courseHome = document.getElementById("course-home");
-
-            if (location.hostname.indexOf("github.io") !== -1) {
-                window.location.replace(cltCourseHome);
-            } else {
-                redirectBlock.classList.add("is-hidden");
-                courseHome.classList.remove("is-hidden");
-            }
-        })();
-    </script>
+    <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
 
 </body>
 </html>
