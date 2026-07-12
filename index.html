@@ -41,6 +41,7 @@ main {
 h2 {
     color: #2c5282;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     border-bottom: 2px solid #90cdf4;
     padding-bottom: 8px;
     display: table;
@@ -49,13 +50,14 @@ h2 {
 h3 {
     color: #2c5282;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
     margin: 0 0 16px;
 }
 
 h4 {
     color: #2c5282;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    font-size: 1.125rem;
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
     margin: 0 0 12px;
 }
 
@@ -75,6 +77,28 @@ header p {
     line-height: 1.6;
 }
 
+main > figure {
+    margin: 16px auto 28px;
+    text-align: center;
+    max-width: 280px;
+}
+
+main > figure img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(26, 35, 50, 0.12);
+}
+
+main > figure figcaption {
+    margin-top: 8px;
+    font-size: 15px;
+    font-style: italic;
+    color: #4a5568;
+    white-space: nowrap;
+}
+
 main > section {
     box-sizing: border-box;
     background-color: #ffffff;
@@ -86,28 +110,7 @@ main > section {
 
 main > section p {
     line-height: 1.7;
-    margin: 16px 0 0;
-}
-
-main > section figure {
-    margin: 16px auto 0;
-    text-align: center;
-    max-width: 280px;
-}
-
-main > section figure img {
-    max-width: 280px;
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(26, 35, 50, 0.12);
-}
-
-main > section figure figcaption {
-    margin-top: 8px;
-    font-size: 15px;
-    font-style: italic;
-    color: #4a5568;
+    margin: 0;
 }
 
 main > section:has(article) {
@@ -200,6 +203,10 @@ footer a:hover {
         max-width: 100%;
         padding: 20px;
     }
+
+    main > figure figcaption {
+        white-space: normal;
+    }
 }
   </style>
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
@@ -213,14 +220,14 @@ footer a:hover {
   <main>
     <h2>Home</h2>
 
+    <figure>
+      <img src="images/neha-introduction.jpg"
+           alt="Neha Kamichetty at graduation wearing a cap and gown">
+      <figcaption>Neha at graduation.</figcaption>
+    </figure>
+
     <section>
       <h3>About Me</h3>
-
-      <figure>
-        <img src="images/neha-introduction.jpg"
-             alt="Neha Kamichetty at graduation wearing a cap and gown.">
-        <figcaption>Neha at graduation.</figcaption>
-      </figure>
 
       <p>
         My name is Neha Kamichetty. I'm a Computer Science student at UNC Charlotte with a concentration in
@@ -265,7 +272,7 @@ footer a:hover {
     </section>
 
     <p>
-      <a href="itis3135/">Go to my ITIS 3135 Course Site</a>
+      <a href="itis3135/">ITIS 3135</a>
     </p>
   </main>
 
