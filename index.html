@@ -202,6 +202,7 @@ footer a:hover {
     }
 }
   </style>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
@@ -276,39 +277,5 @@ footer a:hover {
   </footer>
 
   <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
-
-  <script>
-    window.addEventListener("load", function () {
-      function loadAccumulus() {
-        if (window.accumulite || document.getElementById("ACCUMF")) {
-          return;
-        }
-        var accumulus = document.createElement("script");
-        accumulus.src = "https://lint.page/kit/4d0fe3.js";
-        accumulus.crossOrigin = "anonymous";
-        document.head.appendChild(accumulus);
-      }
-
-      function waitForVicunadatorThenLoad() {
-        if (document.getElementById("standards-check-badge")) {
-          setTimeout(loadAccumulus, 300);
-          return;
-        }
-        var observer = new MutationObserver(function () {
-          if (document.getElementById("standards-check-badge")) {
-            observer.disconnect();
-            setTimeout(loadAccumulus, 300);
-          }
-        });
-        observer.observe(document.body, { childList: true, subtree: true });
-        setTimeout(function () {
-          observer.disconnect();
-          loadAccumulus();
-        }, 15000);
-      }
-
-      setTimeout(waitForVicunadatorThenLoad, 500);
-    });
-  </script>
 </body>
 </html>
