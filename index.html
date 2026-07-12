@@ -14,6 +14,7 @@ body {
 }
 
 header {
+    box-sizing: border-box;
     max-width: 960px;
     margin: 30px auto 0;
     background-color: #ffffff;
@@ -30,6 +31,7 @@ h1 {
 }
 
 main {
+    box-sizing: border-box;
     max-width: 960px;
     margin: 0 auto 25px;
     padding: 0 20px 25px;
@@ -74,6 +76,7 @@ header p {
 }
 
 main > section {
+    box-sizing: border-box;
     background-color: #ffffff;
     padding: 25px;
     border-radius: 12px;
@@ -93,7 +96,8 @@ main > section figure {
 }
 
 main > section figure img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(26, 35, 50, 0.12);
 }
@@ -106,16 +110,19 @@ main > section figure figcaption {
 }
 
 main > section:has(article) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
     text-align: center;
 }
 
 main > section article {
     box-sizing: border-box;
-    display: inline-block;
-    width: 30%;
+    flex: 1 1 calc(33.333% - 24px);
+    max-width: calc(33.333% - 24px);
+    min-width: 220px;
     min-height: 210px;
-    margin: 12px;
-    vertical-align: top;
     text-align: left;
     font-size: 16px;
     background-color: #f7fafc;
@@ -168,7 +175,8 @@ footer a:hover {
 
 @media (max-width: 900px) {
     main > section article {
-        width: 44%;
+        flex: 1 1 calc(50% - 24px);
+        max-width: calc(50% - 24px);
     }
 }
 
@@ -187,13 +195,13 @@ footer a:hover {
     }
 
     main > section article {
-        width: 90%;
-        margin: 12px auto;
+        flex: 1 1 100%;
+        max-width: 100%;
         padding: 20px;
     }
 }
   </style>
-  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous" data-deferred-accumulus nomodule></script>
 </head>
 <body>
   <header>
@@ -269,5 +277,23 @@ footer a:hover {
   </footer>
 
   <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
+
+  <script>
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        if (window.accumulite || document.getElementById("ACCUMF")) {
+          return;
+        }
+        var placeholder = document.querySelector("script[data-deferred-accumulus]");
+        if (!placeholder) {
+          return;
+        }
+        var accumulus = document.createElement("script");
+        accumulus.src = placeholder.getAttribute("src");
+        accumulus.crossOrigin = "anonymous";
+        document.head.appendChild(accumulus);
+      }, 2000);
+    });
+  </script>
 </body>
 </html>
