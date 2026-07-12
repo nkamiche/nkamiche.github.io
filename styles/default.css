@@ -28,21 +28,25 @@ main {
     overflow-x: hidden;
 }
 
-h2,
-h3,
-h4 {
+h2 {
     color: #2c5282;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-}
-
-h2 {
     border-bottom: 2px solid #90cdf4;
     padding-bottom: 8px;
     display: table;
 }
 
 h3 {
+    color: #2c5282;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     margin: 0 0 16px;
+}
+
+h4 {
+    color: #2c5282;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 1.125rem;
+    margin: 0 0 12px;
 }
 
 nav a {
@@ -109,18 +113,12 @@ main > section article {
     background-color: #f7fafc;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(26, 35, 50, 0.08);
-}
-
-main > section h4 {
-    margin: 0 0 12px;
-    font-size: 18px;
-    padding: 24px 24px 0;
+    padding: 24px;
 }
 
 main > section article p {
     margin: 0;
     line-height: 1.65;
-    padding: 0 24px 24px;
 }
 
 main > p {
@@ -183,13 +181,6 @@ footer a:hover {
     main > section article {
         width: 90%;
         margin: 12px auto;
-    }
-
-    main > section h4 {
-        padding: 20px 20px 0;
-    }
-
-    main > section article p {
-        padding: 0 20px 20px;
+        padding: 20px;
     }
 }
