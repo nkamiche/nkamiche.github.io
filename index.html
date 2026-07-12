@@ -7,24 +7,25 @@
   <link rel="icon" href="images/favicon.ico">
   <style id="personal-embedded-css">
 body {
-    background-color: #e9b3b7;
-    font-family: Arial, sans-serif;
+    background-color: #e8edf5;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    color: #3a1f1b;
+    color: #1a2332;
 }
 
 header {
     max-width: 960px;
     margin: 30px auto 0;
-    background-color: #f9eced;
+    background-color: #ffffff;
     text-align: center;
     padding: 30px;
     border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(26, 35, 50, 0.08);
 }
 
 h1 {
-    color: #883128;
-    font-family: Georgia, serif;
+    color: #2c5282;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     margin: 0 0 12px;
 }
 
@@ -35,16 +36,25 @@ main {
     overflow-x: hidden;
 }
 
+h2,
+h3,
+h4 {
+    color: #2c5282;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
 h2 {
-    color: #883128;
-    font-family: Georgia, serif;
-    border-bottom: 2px solid #cc8b84;
+    border-bottom: 2px solid #90cdf4;
     padding-bottom: 8px;
     display: table;
 }
 
+h3 {
+    margin: 0 0 16px;
+}
+
 nav a {
-    color: #883128;
+    color: #2c5282;
     text-decoration: none;
     font-weight: bold;
 }
@@ -54,70 +64,48 @@ nav a:hover {
 }
 
 header p {
-    margin: 0 0 12px;
+    margin: 0;
     font-size: 17px;
     line-height: 1.6;
 }
 
-.hero {
-    text-align: center;
-    padding: 32px 0 24px;
-}
-
-.hero-title {
-    font-size: 32px;
-    display: block;
-    border-bottom: none;
-    padding-bottom: 0;
-    margin: 0 0 12px;
-}
-
-.hero-tagline {
-    max-width: 640px;
-    margin: 0 auto;
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-.about-card {
-    background-color: #f9eced;
+main > section {
+    background-color: #ffffff;
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 2px 8px #cccccc;
+    box-shadow: 0 2px 8px rgba(26, 35, 50, 0.08);
     margin-bottom: 28px;
 }
 
-.about-card p {
+main > section p {
     line-height: 1.7;
     margin: 16px 0 0;
 }
 
-.about-photo {
+main > section figure {
     margin: 16px auto 0;
     text-align: center;
     max-width: 280px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px #cccccc;
 }
 
-.about-photo img {
+main > section figure img {
     width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(26, 35, 50, 0.12);
 }
 
-.about-photo figcaption {
+main > section figure figcaption {
     margin-top: 8px;
     font-size: 15px;
     font-style: italic;
-    color: #6d4a44;
+    color: #4a5568;
 }
 
-.interests {
-    margin-bottom: 32px;
+main > section:has(article) {
     text-align: center;
 }
 
-.interest-card {
+main > section article {
     box-sizing: border-box;
     display: inline-block;
     width: 30%;
@@ -126,35 +114,33 @@ header p {
     vertical-align: top;
     text-align: left;
     font-size: 16px;
-    background-color: #f9eced;
+    background-color: #f7fafc;
     border-radius: 12px;
-    box-shadow: 0 2px 8px #cccccc;
+    box-shadow: 0 2px 8px rgba(26, 35, 50, 0.08);
 }
 
-.interest-card-title {
-    color: #883128;
-    font-family: Georgia, serif;
+main > section h4 {
     margin: 0 0 12px;
     font-size: 18px;
-    padding: 24px 24px 0 24px;
+    padding: 24px 24px 0;
 }
 
-.interest-card p {
+main > section article p {
     margin: 0;
     line-height: 1.65;
-    padding: 0 24px 24px 24px;
+    padding: 0 24px 24px;
 }
 
-.course-link {
+main > p {
     text-align: center;
     padding: 8px 0 16px;
+    margin: 0;
 }
 
-.button {
-    display: table;
-    margin: 0 auto;
-    background-color: #883128;
-    /* White text provides clear contrast against the dark red button background. */
+main > p a {
+    display: inline-block;
+    background-color: #3182ce;
+    /* White text provides clear contrast against the blue button background. */
     color: white;
     padding: 12px 24px;
     border-radius: 8px;
@@ -162,18 +148,18 @@ header p {
     font-weight: bold;
 }
 
-.button:hover {
-    background-color: #6d251e;
+main > p a:hover {
+    background-color: #2c5282;
 }
 
 footer {
-    color: #883128;
+    color: #2c5282;
     text-align: center;
     padding: 20px;
 }
 
 footer a {
-    color: #883128;
+    color: #2c5282;
     text-decoration: none;
     font-weight: bold;
 }
@@ -182,20 +168,8 @@ footer a:hover {
     text-decoration: underline;
 }
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-
 @media (max-width: 900px) {
-    .interest-card {
+    main > section article {
         width: 44%;
     }
 }
@@ -210,25 +184,21 @@ footer a:hover {
         padding: 0 16px 20px;
     }
 
-    .hero-title {
-        font-size: 26px;
-    }
-
-    .about-card {
+    main > section {
         padding: 20px;
     }
 
-    .interest-card {
+    main > section article {
         width: 90%;
         margin: 12px auto;
     }
 
-    .interest-card-title {
-        padding: 20px 20px 0 20px;
+    main > section h4 {
+        padding: 20px 20px 0;
     }
 
-    .interest-card p {
-        padding: 0 20px 20px 20px;
+    main > section article p {
+        padding: 0 20px 20px;
     }
 }
   </style>
@@ -238,29 +208,19 @@ footer a:hover {
   <header>
     <h1>Neha Kamichetty</h1>
     <p><em>UNC Charlotte Computer Science student passionate about technology and creativity.</em></p>
-
-    <nav aria-label="Site navigation">
-      <a href="#about">About</a> |
-      <a href="#interests">Interests</a>
-    </nav>
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="welcome-title">
-      <h2 id="welcome-title" class="hero-title">Welcome to My Personal Site</h2>
-      <p class="hero-tagline">
-        Hi, I'm Neha — a UNC Charlotte student passionate about technology, creativity, and building meaningful projects.
-      </p>
-    </section>
+    <h2>Home</h2>
 
-    <section class="about-card" id="about" aria-labelledby="about-title">
-      <h2 id="about-title" class="about-title">About Me</h2>
+    <section>
+      <h3>About Me</h3>
 
-      <figure class="about-photo">
+      <figure>
         <img src="images/neha-introduction.jpg"
-             alt="Neha Kamichetty smiling in a restaurant mirror while holding a phone."
+             alt="Neha Kamichetty at graduation wearing a cap and gown."
              width="280">
-        <figcaption>Neha Kamichetty — personal homepage photo</figcaption>
+        <figcaption>Neha at graduation.</figcaption>
       </figure>
 
       <p>
@@ -270,46 +230,44 @@ footer a:hover {
       </p>
     </section>
 
-    <section class="interests" id="interests" aria-labelledby="interests-title">
-      <h2 id="interests-title" class="visually-hidden">My Interests</h2>
+    <section>
+      <h3>Interests</h3>
 
-      <div class="interests-grid">
-        <article class="interest-card">
-          <h3 class="interest-card-title">🎨 Art</h3>
-          <p>I enjoy drawing, digital art, and creative design.</p>
-        </article>
+      <article>
+        <h4>🎨 Art</h4>
+        <p>I enjoy drawing, digital art, and creative design.</p>
+      </article>
 
-        <article class="interest-card">
-          <h3 class="interest-card-title">🏊 Swimming</h3>
-          <p>Swimming is one of my favorite hobbies and helps me stay active.</p>
-        </article>
+      <article>
+        <h4>🏊 Swimming</h4>
+        <p>Swimming is one of my favorite hobbies and helps me stay active.</p>
+      </article>
 
-        <article class="interest-card">
-          <h3 class="interest-card-title">🔐 Cybersecurity</h3>
-          <p>
-            I'm studying Computer Science with a Cybersecurity concentration and enjoy learning how
-            technology and security work together.
-          </p>
-        </article>
+      <article>
+        <h4>🔐 Cybersecurity</h4>
+        <p>
+          I'm studying Computer Science with a Cybersecurity concentration and enjoy learning how
+          technology and security work together.
+        </p>
+      </article>
 
-        <article class="interest-card">
-          <h3 class="interest-card-title">💻 Coding</h3>
-          <p>
-            I enjoy building websites, programming in Python and Java, and creating projects that solve
-            real problems.
-          </p>
-        </article>
+      <article>
+        <h4>💻 Coding</h4>
+        <p>
+          I enjoy building websites, programming in Python and Java, and creating projects that solve
+          real problems.
+        </p>
+      </article>
 
-        <article class="interest-card">
-          <h3 class="interest-card-title">💡 Technology</h3>
-          <p>I enjoy learning about AI, software development, and exploring new technologies.</p>
-        </article>
-      </div>
+      <article>
+        <h4>💡 Technology</h4>
+        <p>I enjoy learning about AI, software development, and exploring new technologies.</p>
+      </article>
     </section>
 
-    <section class="course-link" aria-label="Course site link">
-      <a class="button" href="itis3135/">Go to my ITIS 3135 Course Site</a>
-    </section>
+    <p>
+      <a href="itis3135/">Go to my ITIS 3135 Course Site</a>
+    </p>
   </main>
 
   <footer>
