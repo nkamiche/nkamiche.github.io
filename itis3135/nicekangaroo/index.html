@@ -6,33 +6,58 @@
     <link rel="icon" href="../images/favicon.ico">
     <title>Nice Kangaroo Care Kits | Home</title>
     <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div data-include="components/header.html"></div>
 
     <main>
-        <div class="content-panel">
-            <h2>Home</h2>
+        <h2>Home</h2>
 
-            <p class="placeholder-note">
-                Welcome content for Nice Kangaroo Care Kits will go here later, including a hero message
-                about curated care kits for college students and young professionals.
-            </p>
+        <p>
+            Nice Kangaroo Care Kits is a whimsical business offering study kits, self-care kits,
+            tech emergency kits, travel kits, dorm essentials, and personalized gift pouches for
+            students, friends, family members, and special occasions.
+        </p>
 
-            <p>
-                Nice Kangaroo Care Kits is a whimsical business offering study kits, self-care kits,
-                tech emergency kits, travel kits, dorm essentials, and personalized gift pouches.
-            </p>
+        <p>
+            Every pouch is curated with practical items, small comforts, and playful branding that
+            helps customers feel prepared, supported, and ready for whatever the day brings.
+        </p>
+
+        <section aria-labelledby="slideshow-heading">
+            <h3 id="slideshow-heading">Featured Care Kits</h3>
 
             <figure>
-                <img src="https://picsum.photos/seed/nicekangaroo-home/640/420" alt="Placeholder image for Nice Kangaroo Care Kits homepage">
-                <figcaption>Placeholder image — branded care kit photography will be added later.</figcaption>
+                <img id="slideshow-image"
+                     src="../images/product-illustration.jpeg"
+                     alt="Assorted Nice Kangaroo care kit products arranged on a table"
+                     width="640"
+                     height="420">
+                <figcaption id="slideshow-caption">Curated care kits filled with practical items for busy students.</figcaption>
             </figure>
-        </div>
+
+            <p class="slideshow-controls">
+                <button type="button" id="slideshow-prev">Previous Kit</button>
+                <button type="button" id="slideshow-next">Next Kit</button>
+            </p>
+
+            <p id="slideshow-status">Showing slide 1 of 4: Curated care kits filled with practical items for busy students.</p>
+        </section>
+
+        <figure>
+            <img src="../images/kangaroo-standing@sunil-nepali_pexels.jpg"
+                 alt="Kangaroo standing outdoors representing the Nice Kangaroo brand mascot"
+                 width="640"
+                 height="420">
+            <figcaption>Our Nice Kangaroo mascot welcomes visitors to explore customizable care kits.</figcaption>
+        </figure>
     </main>
 
     <div data-include="components/footer.html"></div>
 
     <script src="../scripts/htmlinclude.js"></script>
+    <script src="scripts/product-slideshow.js" defer></script>
+    <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
 </body>
 </html>

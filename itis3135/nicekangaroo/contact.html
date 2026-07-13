@@ -6,33 +6,84 @@
     <link rel="icon" href="../images/favicon.ico">
     <title>Nice Kangaroo Care Kits | Contact</title>
     <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div data-include="components/header.html"></div>
 
     <main>
-        <div class="content-panel">
-            <h2>Contact</h2>
+        <h2>Contact</h2>
 
-            <p class="placeholder-note">
-                Contact information and a customer inquiry form will go here later, including email, social
-                links, and a message area for custom kit requests.
+        <p>
+            Contact Nice Kangaroo Care Kits to ask questions, request a custom pouch, or schedule a pickup
+            for your next care kit order. Use the form below to choose a kit type, select a pickup date and
+            time, and receive a personalized confirmation summary without reloading the page.
+        </p>
+
+        <p>
+            You can also email our team at
+            <a href="mailto:carekits@nicekangaroo.example">carekits@nicekangaroo.example</a>
+            for subscription requests, bulk orders, and campus delivery questions.
+        </p>
+
+        <figure>
+            <img src="../images/neha-introduction.jpg"
+                 alt="Neha Kamichetty smiling while holding a phone in a mirror reflection"
+                 width="640"
+                 height="420">
+            <figcaption>Reach out to schedule pickup or ask about personalized Nice Kangaroo care kits.</figcaption>
+        </figure>
+
+        <section class="order-form" aria-labelledby="order-form-heading">
+            <h3 id="order-form-heading">Schedule Pickup</h3>
+
+            <form id="order-schedule-form">
+                <label for="customer-name">Full Name</label>
+                <input type="text" id="customer-name" name="customerName" required>
+
+                <label for="customer-email">Email</label>
+                <input type="email" id="customer-email" name="customerEmail" required>
+
+                <label for="kit-type">Kit Type</label>
+                <select id="kit-type" name="kitType" required>
+                    <option value="">Select a kit</option>
+                    <option value="Study Kit">Study Kit</option>
+                    <option value="Self-Care Kit">Self-Care Kit</option>
+                    <option value="Tech Emergency Kit">Tech Emergency Kit</option>
+                    <option value="Travel Kit">Travel Kit</option>
+                    <option value="Dorm Essentials Kit">Dorm Essentials Kit</option>
+                    <option value="Custom Mixed Kit">Custom Mixed Kit</option>
+                </select>
+
+                <label for="pickup-date">Pickup Date</label>
+                <input type="date" id="pickup-date" name="pickupDate" required>
+
+                <label for="pickup-time">Pickup Time</label>
+                <select id="pickup-time" name="pickupTime" required>
+                    <option value="">Select a time</option>
+                    <option value="10:00 AM">10:00 AM</option>
+                    <option value="12:00 PM">12:00 PM</option>
+                    <option value="2:00 PM">2:00 PM</option>
+                    <option value="4:00 PM">4:00 PM</option>
+                </select>
+
+                <label for="order-notes">Order Notes</label>
+                <textarea id="order-notes" name="orderNotes" placeholder="Add gift message or special instructions"></textarea>
+
+                <button type="submit">Schedule Pickup</button>
+                <button type="reset">Clear Form</button>
+            </form>
+
+            <p class="order-summary" id="order-summary" aria-live="polite">
+                Your personalized order summary will appear here after you schedule pickup.
             </p>
-
-            <p>
-                Visitors will use this page to ask questions, request personalized gift pouches, or learn
-                how to connect with Nice Kangaroo Care Kits.
-            </p>
-
-            <figure>
-                <img src="https://picsum.photos/seed/nicekangaroo-contact/640/420" alt="Placeholder image for the Contact page">
-                <figcaption>Placeholder image — contact banner or support visuals will be added later.</figcaption>
-            </figure>
-        </div>
+        </section>
     </main>
 
     <div data-include="components/footer.html"></div>
 
     <script src="../scripts/htmlinclude.js"></script>
+    <script src="scripts/order-schedule.js" defer></script>
+    <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
 </body>
 </html>

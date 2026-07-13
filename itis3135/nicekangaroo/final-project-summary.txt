@@ -1,0 +1,44 @@
+Nice Kangaroo Care Kits Final Project Summary
+Neha Kamichetty
+ITIS 3135
+
+PROJECT DESCRIPTION
+
+For my final project, I created Nice Kangaroo Care Kits, a multi-page website for a fictional business that offers customizable care packages for students, friends, family members, and special occasions. The business uses my Nice Kangaroo mascot and the tagline Pouched with purpose.
+
+PAGES
+
+The website includes these pages:
+- index.html (Home)
+- about.html (About)
+- products.html (Products)
+- services.html (Services)
+- hours.html (Hours)
+- contact.html (Contact)
+
+Each page uses the same shared header and footer component files, includes original written content, and includes at least one relevant image with descriptive alt text.
+
+DYNAMIC JAVASCRIPT FEATURES
+
+1. Customizable care-kit builder (products.html)
+   Users select kit items with checkboxes, and JavaScript displays a live estimated total and selected-item summary without reloading the page.
+
+2. Interactive product slideshow (index.html)
+   JavaScript powers a featured care-kit slideshow with Previous and Next buttons, updated image alt text, captions, and status feedback.
+
+3. Order scheduling form (contact.html)
+   Users submit pickup details through a form, and JavaScript generates a personalized confirmation summary on the same page without reloading.
+
+PEER FEEDBACK
+
+Preston Moore said that he liked the site so far and encouraged me to finish it for the final project. After receiving his feedback, I continued developing the Nice Kangaroo Care Kits pages, completed the shared layout, added final content, and finished the interactive JavaScript features for the completed site.
+
+Shea Stanton said that the concept was unique, matched my mascot well, and gave me room to create different pages and products. He also noted that I had added the idea to the class list and correctly created the project folder. After receiving his feedback, I kept building out the business pages, expanded the product and service content, and completed the final project website inside the nicekangaroo folder.
+
+AI USE
+
+I used AI tools to help with planning, drafting initial page content, troubleshooting HTML, CSS, and JavaScript errors, and checking the project against assignment requirements. I personally reviewed and edited the generated material, tested each page and interactive feature, and validated the website to ensure it followed the course standards.
+
+DEVELOPER CREDIT
+
+Designed and developed by Neha Kamichetty (c) 2026
