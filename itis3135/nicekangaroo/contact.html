@@ -6,9 +6,11 @@
     <link rel="icon" href="../images/favicon.ico">
     <title>Nice Kangaroo Care Kits | Contact</title>
     <link rel="stylesheet" href="styles/default.css">
+    <!-- Page styling uses shared classes in default.css; JavaScript toggles is-hidden instead of inline styles. -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous" data-deferred-accumulus nomodule></script>
 </head>
 <body>
+    <!-- data-include tells HTMLInclude which shared header file to load on every business page. -->
     <div data-include="components/header.html"></div>
 
     <main>
@@ -34,6 +36,7 @@
             <figcaption>Reach out to schedule pickup or ask about personalized Nice Kangaroo care kits.</figcaption>
         </figure>
 
+        <!-- order-form, order-summary, and form IDs give JavaScript targets for the scheduling form and confirmation summary. -->
         <section class="order-form" aria-labelledby="order-form-heading">
             <h3 id="order-form-heading">Schedule Pickup</h3>
 
@@ -80,6 +83,7 @@
         </section>
     </main>
 
+    <!-- data-include tells HTMLInclude which shared footer file to load on every business page. -->
     <div data-include="components/footer.html"></div>
 
     <script src="../scripts/htmlinclude.js"></script>

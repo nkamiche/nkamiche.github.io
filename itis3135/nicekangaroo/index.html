@@ -6,9 +6,11 @@
     <link rel="icon" href="../images/favicon.ico">
     <title>Nice Kangaroo Care Kits | Home</title>
     <link rel="stylesheet" href="styles/default.css">
+    <!-- Page styling uses shared classes in default.css; JavaScript toggles is-hidden instead of inline styles. -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous" data-deferred-accumulus nomodule></script>
 </head>
 <body>
+    <!-- data-include tells HTMLInclude which shared header file to load on every business page. -->
     <div data-include="components/header.html"></div>
 
     <main>
@@ -25,6 +27,7 @@
             helps customers feel prepared, supported, and ready for whatever the day brings.
         </p>
 
+        <!-- These classes style the slideshow layout, while the IDs allow JavaScript to update the image, caption, and status. -->
         <section aria-labelledby="slideshow-heading">
             <h3 id="slideshow-heading">Featured Care Kits</h3>
 
@@ -54,6 +57,7 @@
         </figure>
     </main>
 
+    <!-- data-include tells HTMLInclude which shared footer file to load on every business page. -->
     <div data-include="components/footer.html"></div>
 
     <script src="../scripts/htmlinclude.js"></script>
