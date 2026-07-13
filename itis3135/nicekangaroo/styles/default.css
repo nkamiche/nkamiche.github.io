@@ -6,6 +6,7 @@ body {
     line-height: 1.65;
 }
 
+/* White provides readable contrast against the dark teal header background. */
 .site-header {
     background-color: #2a9d8f;
     color: #ffffff;
@@ -23,6 +24,7 @@ body {
     color: #d8fff8;
 }
 
+/* White keeps the business name readable on the teal header bar. */
 h1 {
     margin: 0 0 8px;
     font-family: "Trebuchet MS", "Segoe UI", sans-serif;
@@ -43,6 +45,7 @@ h1 {
     gap: 8px 14px;
 }
 
+/* White navigation links stay visible against the teal header. */
 .site-header nav a {
     color: #ffffff;
     text-decoration: none;
@@ -58,6 +61,7 @@ h1 {
     transform: translateY(-1px);
 }
 
+/* White creates a clean content surface and improves text readability. */
 main {
     max-width: 920px;
     margin: 28px auto;
@@ -111,6 +115,7 @@ figcaption {
     margin: 16px 0 8px;
 }
 
+/* White button text contrasts clearly with the teal action buttons. */
 .slideshow-controls button,
 form button {
     background-color: #2a9d8f;
@@ -238,4 +243,9 @@ form button:hover {
     main {
         padding: 20px 16px 24px;
     }
+}
+
+/* Display block keeps the Accumulus validation image from leaving extra whitespace. */
+#ACCUMF {
+    display: block;
 }
