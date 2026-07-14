@@ -27,6 +27,8 @@
 
                     if (href.indexOf("../") !== 0 && href.indexOf("./") !== 0) {
                         links[i].setAttribute("href", prefix + href);
+                    } else if (href.indexOf("../") === 0) {
+                        links[i].setAttribute("href", prefix + href);
                     }
                 }
 
