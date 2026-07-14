@@ -591,3 +591,14 @@ nav a:hover,
     margin: 0.5rem 0 0 1.25rem;
     padding-left: 1.25rem;
 }
+
+h6.display-name {
+    display: block;
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-family: Georgia, serif;
+    color: #883128;
+    text-align: center;
+    white-space: nowrap;
+    margin: 12px 0 20px;
+    overflow-x: auto;
+}
