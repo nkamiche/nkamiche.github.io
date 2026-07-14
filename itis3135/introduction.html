@@ -15,14 +15,15 @@
 
     <style>
         /* Introduction display name is intentionally large and kept on one line. */
-        .display-name {
+        .introduction-page .display-name {
             display: block;
-            font-size: 1.6rem;
+            font-size: clamp(1.2rem, 3vw, 1.75rem);
             font-family: Georgia, serif;
             color: #883128;
             text-align: center;
             white-space: nowrap;
             margin: 12px 0 20px;
+            overflow-x: auto;
         }
     </style>
 
@@ -97,7 +98,7 @@
             font-family: Georgia, serif;
         }
 
-        .introduction-page .intro-details ul {
+        .introduction-page .intro-details ol {
             margin: 0.5rem 0 0;
             padding-left: 1.5rem;
         }
@@ -185,16 +186,25 @@
             </li>
 
             <li>
-                <strong>Primary Computer Platform:</strong>
-                Windows laptop running Windows 11. I usually work from home in North Carolina, and I sometimes use
-                the public library computers nearby as an alternate option.
+                <strong>Primary Work Computer:</strong>
+                Windows laptop.
+            </li>
+
+            <li>
+                <strong>Primary Work Location:</strong>
+                Home in North Carolina.
+            </li>
+
+            <li>
+                <strong>Alternate Computer:</strong>
+                Going to the public library near me and working on the computers there.
             </li>
 
             <li>
                 <strong>Courses I'm Taking:</strong>
-                <ul>
+                <ol>
                     <li>ITIS 3135 &ndash; Front-End Web Application Development: To strengthen my HTML, CSS, and JavaScript skills. And I need the credit!</li>
-                </ul>
+                </ol>
             </li>
 
             <li>
