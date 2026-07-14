@@ -67,6 +67,31 @@ header p em {
     font-size: 16px;
 }
 
+.course-nav-primary {
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #cc8b84;
+}
+
+.course-nav-secondary {
+    background-color: #fff3f4;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #e8c4c8;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 22px 16px;
+    }
+
+    .course-nav-primary,
+    .course-nav-secondary {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+}
+
 .is-hidden {
     display: none;
 }

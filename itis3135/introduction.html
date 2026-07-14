@@ -35,8 +35,7 @@
         .introduction-page main p,
         .introduction-page main li,
         .introduction-page main figcaption,
-        .introduction-page main blockquote,
-        .introduction-page .privacy-notice {
+        .introduction-page main blockquote {
             font-family: "Comfortaa", Arial, sans-serif;
             line-height: 1.8;
         }
@@ -75,54 +74,32 @@
             font-size: 0.95rem;
         }
 
-        .introduction-page .privacy-notice {
-            background-color: #fff8f9;
-            border-left: 4px solid #883128;
-            border-radius: 10px;
-            padding: 1rem 1.25rem;
-            margin: 0 0 1.75rem;
-            box-shadow: 0 2px 8px rgba(136, 49, 40, 0.08);
-        }
-
-        .introduction-page .privacy-notice p {
-            margin: 0;
-        }
-
-        .introduction-page .privacy-notice .signature {
-            display: block;
-            margin-top: 0.5rem;
-            font-weight: 600;
-            color: #883128;
-        }
-
         .introduction-page .intro-lead {
             margin: 0 0 2rem;
             font-size: 1rem;
         }
 
         .introduction-page .intro-details {
-            list-style: none;
-            padding: 0;
             margin: 0;
+            padding-left: 1.5rem;
         }
 
-        .introduction-page .intro-details li {
-            margin-bottom: 1.35rem;
-            padding-bottom: 1.35rem;
-            border-bottom: 1px solid #e8c4c8;
+        .introduction-page .intro-details > li {
+            margin-bottom: 1.1rem;
         }
 
-        .introduction-page .intro-details li:last-child {
-            border-bottom: none;
+        .introduction-page .intro-details > li:last-child {
             margin-bottom: 0;
-            padding-bottom: 0;
         }
 
         .introduction-page .intro-details strong {
-            display: block;
             color: #883128;
-            margin-bottom: 0.35rem;
             font-family: Georgia, serif;
+        }
+
+        .introduction-page .intro-details ul {
+            margin: 0.5rem 0 0;
+            padding-left: 1.5rem;
         }
 
         .introduction-page .intro-quote {
@@ -130,7 +107,6 @@
             padding: 1.75rem 1.25rem 0;
             border-top: 2px solid #cc8b84;
             text-align: center;
-            font-style: italic;
         }
 
         .introduction-page .intro-quote p {
@@ -141,8 +117,11 @@
 
         .introduction-page .intro-quote cite {
             font-style: normal;
-            font-weight: 600;
             color: #6d4a44;
+        }
+
+        .introduction-page .intro-quote cite em {
+            font-style: italic;
         }
 
         @media (max-width: 600px) {
@@ -175,13 +154,6 @@
             <figcaption>In a restaurant mirror</figcaption>
         </figure>
 
-        <aside class="privacy-notice" aria-label="Public posting agreement">
-            <p>
-                &ldquo;I understand that what I post here is publicly viewable and won't post anything I don't want public here.&rdquo;
-                <span class="signature">&mdash; NK &mdash; 06/18/2026</span>
-            </p>
-        </aside>
-
         <p class="intro-lead">
             Hello everyone! My name is Neha Kamichetty. I am currently a student at UNC Charlotte and I am excited
             to continue developing my web development skills. I enjoy learning new technologies, working on creative
@@ -189,11 +161,6 @@
         </p>
 
         <ul class="intro-details">
-            <li>
-                <strong>Name:</strong>
-                Neha Kamichetty | Nice Kangaroo
-            </li>
-
             <li>
                 <strong>Personal Background:</strong>
                 I was born in India and moved to the United States when I was 5 because of my dad's job.
@@ -218,51 +185,32 @@
             </li>
 
             <li>
-                <strong>Primary Work Computer:</strong>
-                Windows laptop.
+                <strong>Primary Computer Platform:</strong>
+                Windows laptop running Windows 11. I usually work from home in North Carolina, and I sometimes use
+                the public library computers nearby as an alternate option.
             </li>
 
             <li>
-                <strong>Primary Work Location:</strong>
-                Home in North Carolina.
+                <strong>Courses I'm Taking:</strong>
+                <ul>
+                    <li>ITIS 3135 &ndash; Front-End Web Application Development: To strengthen my HTML, CSS, and JavaScript skills. And I need the credit!</li>
+                </ul>
             </li>
 
             <li>
-                <strong>Operating System &amp; Version:</strong>
-                Windows 11.
-            </li>
-
-            <li>
-                <strong>Alternate Computer:</strong>
-                Going to the public library near me and working on the computers there.
-            </li>
-
-            <li>
-                <strong>Courses I'm Taking &amp; Why:</strong>
-                <ol class="course-list">
-                    <li>
-                        Current Courses
-                        <ol>
-                            <li>ITIS 3135 &ndash; Front-End Web Application Development: To strengthen my HTML, CSS, and JavaScript skills. And I need the credit!</li>
-                        </ol>
-                    </li>
-                </ol>
-            </li>
-
-            <li>
-                <strong>Funny/Interesting Item to Remember Me By:</strong>
+                <strong>Funny/Interesting Item:</strong>
                 I accidentally fell asleep at a 6 a.m. yoga class and woke up to the instructor laughing.
             </li>
 
             <li>
-                <strong>I'd Like to Share:</strong>
+                <strong>Something Else to Share:</strong>
                 I speak 4 languages!
             </li>
         </ul>
 
-        <blockquote class="intro-quote">
+        <blockquote class="intro-quote" cite="https://en.wikiquote.org/wiki/Walt_Whitman">
             <p>&ldquo;Be curious, not judgmental.&rdquo;</p>
-            <cite>- Walt Whitman</cite>
+            <cite>&mdash; <em>Walt Whitman</em></cite>
         </blockquote>
     </main>
 
