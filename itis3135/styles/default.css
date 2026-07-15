@@ -602,3 +602,8 @@ nav a:hover,
     margin: 12px 0 20px;
     overflow-x: auto;
 }
+
+h6.introduction-display-name {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    white-space: nowrap;
+}
