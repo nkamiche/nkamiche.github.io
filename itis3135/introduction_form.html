@@ -332,13 +332,15 @@
     <main id="introduction-main">
         <h2 class="page-title">Introduction Form</h2>
 
+        <h3>Please complete and submit the form below.</h3>
+
         <form id="introduction-form" novalidate>
             <section class="form-section" aria-labelledby="name-section-title">
                 <h3 class="form-section-title" id="name-section-title">Name and Mascot</h3>
 
                 <div class="form-field">
                     <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" name="firstName" required>
+                    <input type="text" id="firstName" name="firstName" value="Neha" required>
                 </div>
 
                 <div class="form-field">
@@ -534,7 +536,7 @@
                 <button type="button" id="generateJsonButton" class="button-secondary">Generate JSON</button>
                 <button type="button" id="generateXmlButton" class="button-secondary">Generate XML</button>
                 <button type="submit">Submit</button>
-                <button type="button" id="resetFormButton" class="button-secondary">Reset</button>
+                <button type="reset" id="resetFormButton" class="button-secondary">Reset</button>
                 <button type="button" id="clearFormButton" class="button-secondary">Clear</button>
             </div>
 
@@ -547,6 +549,12 @@
 
     <script src="scripts/htmlinclude.js"></script>
     <script src="scripts/introduction.js"></script>
+
+    <script>
+        document.getElementById("introduction-form").addEventListener("reset", function (event) {
+            event.preventDefault();
+        });
+    </script>
 
     <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
 
