@@ -62,10 +62,24 @@ main figcaption {
     color: #6d4a44;
 }
 
-nav a {
+nav a,
+main a {
     color: #883128;
     text-decoration: none;
     font-weight: bold;
+}
+
+main a:visited {
+    color: #883128;
+}
+
+main a:hover,
+main a:focus {
+    text-decoration: underline;
+}
+
+main a:active {
+    color: #6d251e;
 }
 
 header p em {
@@ -154,6 +168,7 @@ footer a {
 
 footer a:hover,
 nav a:hover,
+main a:hover,
 .doc-sidebar a:hover {
     text-decoration: underline;
 }
